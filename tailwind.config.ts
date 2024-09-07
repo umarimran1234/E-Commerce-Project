@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'banner': "url('https://picsum.photos/730/350')"
+      }
     },
   },
   plugins: [],
