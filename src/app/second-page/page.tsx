@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Navigation from "@/components/Navigation/Navigation";
 import Products from "@/components/Products/Products";
 import FilterSidebar from "@/components/Sidebar/FilterSidebar";
+import Subscribe from "@/components/Subscribe/Subscribe";
 import TopSection from "@/components/TopSection/TopSection";
 
 function SecondPage() {
@@ -16,6 +17,7 @@ function SecondPage() {
                     <Navigation></Navigation>
                 </div>
             </div>
+            <Subscribe></Subscribe>
         </>
     )
 }
