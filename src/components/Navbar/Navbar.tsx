@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaHeart, FaShoppingBag } from 'react-icons/fa';
 import { MdAccountCircle, MdMessage } from 'react-icons/md';
@@ -7,18 +8,30 @@ import { IoReorderThreeOutline } from 'react-icons/io5';
 import Image from 'next/image';
 
 const Navbar: React.FC = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleMenuToggle = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <header className="bg-white shadow-md">
             <div className="container border-b-2 mb-2 mx-auto px-4 py-2 flex items-center justify-between">
                 {/* Left Side */}
-                <div className="flex w-1/2 mb-2 justify-between items-center space-x-4">
-                    <Link href={"/"} className="flex gap-2 items-center">
+                <div className="flex w-full justify-between items-center space-x-4">
+                    <Link href="/" className="flex gap-2 items-center">
                         {/* Brand Logo */}
-                        <Image width={100} height={100} alt="Website logo" src={"/images/E-CommerceLogo-1.png"}></Image>
+                        <Image
+                            width={100}
+                            height={100}
+                            alt="Website logo"
+                            src="/images/E-CommerceLogo-1.png"
+                            className="w-24 h-auto md:w-36" // Ensure logo resizes properly
+                        />
                     </Link>
 
                     {/* Search Bar */}
-                    <div className="relative">
+                    <div className="relative hidden md:block">
                         <input
                             type="text"
                             placeholder="Search"
@@ -29,36 +42,69 @@ const Navbar: React.FC = () => {
                         </select>
                         <button className='absolute border-[#0D6EFD] right-0 rounded-r-lg text-white top-1/2 transform -translate-y-1/2 p-2 bg-[#0D6EFD]'>Search</button>
                     </div>
-                </div>
 
-                {/* Right Side */}
-                <div className="flex items-center lg:block hidden space-x-4">
-                    {/* Icons */}
-                    <div className="flex space-x-4 text-[#8B96A5]">
-                        <Link href="#" className='flex flex-col justify-center items-center'>
-                            <MdAccountCircle className='text-2xl' />
-                            <span className="text-gray-700 hover:text-blue-500 text-[#8B96A5]">Profile</span>
+                    {/* Hamburger Icon */}
+                    <div className="lg:hidden">
+                        <button onClick={handleMenuToggle}>
+                            <IoReorderThreeOutline className="text-3xl text-gray-700" />
+                        </button>
+                    </div>
+
+                    {/* Right Side Icons - hidden on smaller devices */}
+                    <div className="hidden lg:flex space-x-4 text-[#8B96A5]">
+                        <Link href="#" className="flex flex-col justify-center items-center">
+                            <MdAccountCircle className="text-2xl" />
+                            <span className="text-gray-700 hover:text-blue-500">Profile</span>
                         </Link>
-                        <Link href="#" className='flex flex-col justify-center items-center'>
-                            <MdMessage className='text-2xl' />
-                            <span className="text-gray-700 hover:text-blue-500 text-[#8B96A5]">Messages</span>
+                        <Link href="#" className="flex flex-col justify-center items-center">
+                            <MdMessage className="text-2xl" />
+                            <span className="text-gray-700 hover:text-blue-500">Messages</span>
                         </Link>
-                        <Link href="#" className='flex flex-col justify-center items-center'>
-                            <FaHeart className='text-2xl' />
-                            <span className="text-gray-700 hover:text-blue-500 text-[#8B96A5]">Orders</span>
+                        <Link href="#" className="flex flex-col justify-center items-center">
+                            <FaHeart className="text-2xl" />
+                            <span className="text-gray-700 hover:text-blue-500">Orders</span>
                         </Link>
-                        <Link href="#" className='flex flex-col justify-center items-center'>
-                            <FaCartShopping className='text-2xl' />
-                            <span className="text-gray-700 hover:text-blue-500 text-[#8B96A5]">My Cart</span>
+                        <Link href="#" className="flex flex-col justify-center items-center">
+                            <FaCartShopping className="text-2xl" />
+                            <span className="text-gray-700 hover:text-blue-500">My Cart</span>
                         </Link>
                     </div>
                 </div>
             </div>
-            {/* Nav Links */}
-            <nav className="hidden container mx-auto lg:flex items-center justify-between">
-                <div className='space-x-8 font-medium lg:flex items-center mb-2'>
-                    <Link href="#" className='flex items-center gap-1'>
-                        <IoReorderThreeOutline className='font-bold text-xl' />
+
+            {/* Dropdown menu for mobile/tablet */}
+            {menuOpen && (
+                <nav className="lg:hidden bg-white shadow-md transition-transform duration-300">
+                    <ul className="flex flex-col items-start space-y-2 px-4 py-2">
+                        <li>
+                            <Link href="#" className="block text-gray-700 hover:text-blue-500">All Category</Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="block text-gray-700 hover:text-blue-500">Hot Offers</Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="block text-gray-700 hover:text-blue-500">Gift Boxes</Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="block text-gray-700 hover:text-blue-500">Projects</Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="block text-gray-700 hover:text-blue-500">Menu Item</Link>
+                        </li>
+                        <li>
+                            <select className="w-full p-2 border border-gray-300">
+                                <option value="all">Help</option>
+                            </select>
+                        </li>
+                    </ul>
+                </nav>
+            )}
+
+            {/* Desktop Menu */}
+            <nav className="hidden lg:flex container mx-auto items-center justify-between">
+                <div className="space-x-8 font-medium flex items-center mb-2">
+                    <Link href="#" className="flex items-center gap-1">
+                        <IoReorderThreeOutline className="font-bold text-xl" />
                         <span className="text-gray-700 hover:text-blue-500">All Category</span>
                     </Link>
                     <Link href="#">
@@ -84,9 +130,7 @@ const Navbar: React.FC = () => {
                     </select>
                     <div>
                         <select className="text-gray-700">
-                            <option>
-                                Ship to
-                            </option>
+                            <option>Ship to</option>
                         </select>
                     </div>
                 </div>
