@@ -34,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
 
     return (
         <div className='container mx-auto'>
-            <div className="sidebar mt-5 w-52 p-4">
+            <div className="sidebar mt-5 w-36 md:w-52 p-4">
             <h2 className="text-xl font-bold mb-4">Filters</h2>
             <div className="category-filters">
                 {data.map((category) => (
