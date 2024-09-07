@@ -39,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
             <div className="category-filters">
                 {data.map((category) => (
                     <div key={category.name} className="mb-4">
-                        <h3 className="text-lg font-semibold mb-2">{category.name}</h3>
+                        <h3 className="text-lg border-t-2 font-semibold mb-2">{category.name}</h3>
                         <ul className="space-y-2">
                             {category.options.map((option) => (
                                 <li key={option.value}>
@@ -60,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
                 {/* ... similar structure for brand filters */}
             </div>
             <div className="feature-filters">
-                <h3 className="text-lg font-semibold mb-2">Features</h3>
+                <h3 className="text-lg font-semibold border-t-2 mb-2">Features</h3>
                 <ul className="space-y-2">
                     <li>
                         <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
@@ -85,7 +85,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
                 </ul>
             </div>
             <div className="price-range-filter mt-5">
-                <h3 className="text-lg font-semibold mb-2">Price range</h3>
+                <h3 className="text-lg border-t-2 font-semibold mb-2">Price range</h3>
                 <input type="range" className="w-1/2" min="0" max="999999" />
                 <div className="flex gap-8">
                     <label className="text-gray-600">Min</label>
@@ -94,7 +94,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
                 <button className="bg-blue-500 text-white mt-2 px-4 py-2 rounded-md hover:bg-blue-600">Apply</button>
             </div>
             <div className="condition-filter mt-5">
-                <h3 className="text-lg font-semibold mb-2">Condition</h3>
+                <h3 className="text-lg border-t-2 font-semibold mb-2">Condition</h3>
                 <ul className="space-y-2">
                     <li>
                         <input type="radio" name="condition" className="mr-2" />
@@ -115,27 +115,27 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
                 </ul>
             </div>
             <div className="ratings-filter mt-5">
-                <h3 className="text-lg font-semibold mb-2">Ratings</h3>
+                <h3 className="text-lg border-t-2 font-semibold mb-2">Ratings</h3>
                 <ul className="space-y-2">
                     <li>
                         <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                        <label className="text-gray-800 text-[#FF9017]">★★★★★</label>
+                        <label className="text-gray-800 text-orange-500">★★★★★</label>
                     </li>
                     <li>
                         <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                        <label className="text-gray-800 text-[#FF9017]">★★★★</label>
+                        <label className="text-gray-800 text-orange-500">★★★★</label>
                     </li>
                     <li>
                         <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                        <label className="text-gray-800 text-[#FF9017]">★★★</label>
+                        <label className="text-gray-800 text-orange-500">★★★</label>
                     </li>
                     <li>
                         <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                        <label className="text-gray-800 text-[#FF9017]">★★</label>
+                        <label className="text-gray-800 text-orange-500">★★</label>
                     </li>
                     <li>
                         <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                        <label className="text-gray-800 text-[#FF9017]">★</label>
+                        <label className="text-gray-800 text-orange-500">★</label>
                     </li>
                 </ul>
             </div>
