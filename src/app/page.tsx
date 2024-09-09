@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner/Banner";
 import DealsSection from "@/components/DealsSection/DealsSection";
+import HomeAndOutdoor from "@/components/HomeAndOutdoor/HomeAndOutdoor";
 import Navbar from "@/components/Navbar/Navbar";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <Navbar></Navbar>
       <Banner></Banner>
       <DealsSection></DealsSection>
+      <HomeAndOutdoor></HomeAndOutdoor>
     </div>
   );
 }
