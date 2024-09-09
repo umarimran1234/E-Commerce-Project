@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import Navigation from "@/components/Navigation/Navigation";
 import Products from "@/components/Products/Products";
@@ -18,6 +19,7 @@ function SecondPage() {
                 </div>
             </div>
             <Subscribe></Subscribe>
+            <Footer></Footer>
         </>
     )
 }
