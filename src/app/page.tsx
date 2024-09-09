@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner/Banner";
 import DealsSection from "@/components/DealsSection/DealsSection";
+import ExtraServices from "@/components/ExtraServices/ExtraServices";
 import ConsumerElectronics from "@/components/HomeAndOutdoor/ConsumerElectronics";
 import HomeAndOutdoor from "@/components/HomeAndOutdoor/HomeAndOutdoor";
 import Navbar from "@/components/Navbar/Navbar";
@@ -16,6 +17,7 @@ export default function Home() {
       <ConsumerElectronics></ConsumerElectronics>
       <QuoteForm></QuoteForm>
       <RecommendedItems></RecommendedItems>
+      <ExtraServices></ExtraServices>
     </div>
   );
 }
