@@ -6,6 +6,7 @@ import HomeAndOutdoor from "@/components/HomeAndOutdoor/HomeAndOutdoor";
 import Navbar from "@/components/Navbar/Navbar";
 import QuoteForm from "@/components/QuoteForm/QuoteForm";
 import RecommendedItems from "@/components/Recommended/Recommended";
+import SuppliersByRegion from "@/components/Suppliers/Suppliers";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <QuoteForm></QuoteForm>
       <RecommendedItems></RecommendedItems>
       <ExtraServices></ExtraServices>
+      <SuppliersByRegion></SuppliersByRegion>
     </div>
   );
 }
