@@ -4,6 +4,7 @@ import ConsumerElectronics from "@/components/HomeAndOutdoor/ConsumerElectronics
 import HomeAndOutdoor from "@/components/HomeAndOutdoor/HomeAndOutdoor";
 import Navbar from "@/components/Navbar/Navbar";
 import QuoteForm from "@/components/QuoteForm/QuoteForm";
+import RecommendedItems from "@/components/Recommended/Recommended";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeAndOutdoor></HomeAndOutdoor>
       <ConsumerElectronics></ConsumerElectronics>
       <QuoteForm></QuoteForm>
+      <RecommendedItems></RecommendedItems>
     </div>
   );
 }
