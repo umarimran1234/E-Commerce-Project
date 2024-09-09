@@ -15,7 +15,7 @@ const HomeAndOutdoor = () => {
                         }}
                     >
                         <h2 className="text-3xl font-bold mb-4">Home and outdoor</h2>
-                        <button className="bg-gray-800 text-white px-4 py-2 rounded-full font-bold">
+                        <button className="bg-white px-4 py-2 rounded-full font-bold">
                             Source now
                         </button>
                     </div>
