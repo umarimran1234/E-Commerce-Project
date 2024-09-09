@@ -10,16 +10,10 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-8 mb-8">
                     {/* First Section - About Us */}
                     <div className="col-span-2">
-                        <Link href="/" className="flex gap-2 items-center">
-                            {/* Brand Logo */}
-                            <Image
-                                width={100}
-                                height={100}
-                                alt="Website logo"
-                                src="/images/E-CommerceLogo-1.png"
-                                className="w-24 h-auto md:w-36" // Ensure logo resizes properly
-                            />
-                        </Link>
+                    <Link href="/" className="flex text-[#8CB7F5] text-xl font-bold gap-2 items-center">
+                        {/* Brand Logo */}
+                        Brand
+                    </Link>
                         <p className="text-gray-400 leading-relaxed">
                             Best information about the company gies here but now lorem ipsum is.
                         </p>
