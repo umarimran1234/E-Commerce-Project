@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Navbar></Navbar>
       <Banner></Banner>
-      <DealsSection></DealsSection>
+      <DealsSection />
     </div>
   );
 }
