@@ -1,11 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { FaHeart, FaShoppingBag } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import { MdAccountCircle, MdMessage } from "react-icons/md";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoReorderThreeOutline } from "react-icons/io5";
-import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,15 +18,12 @@ const Navbar: React.FC = () => {
       <div className="container border-b-2 mb-2 mx-auto px-4 py-2 flex items-center justify-between">
         {/* Left Side */}
         <div className="flex w-full justify-between items-center space-x-4">
-          <Link href="/" className="flex gap-2 items-center">
+          <Link
+            href="/"
+            className="flex text-[#8CB7F5] text-xl font-bold gap-2 items-center"
+          >
             {/* Brand Logo */}
-            <Image
-              width={100}
-              height={100}
-              alt="Website logo"
-              src="/images/E-CommerceLogo-1.png"
-              className="w-24 h-auto md:w-36" // Ensure logo resizes properly
-            />
+            Brand
           </Link>
 
           {/* Search Bar */}
@@ -184,5 +180,4 @@ const Navbar: React.FC = () => {
     </header>
   );
 };
-
 export default Navbar;

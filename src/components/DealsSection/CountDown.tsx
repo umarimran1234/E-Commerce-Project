@@ -6,31 +6,39 @@ interface CountdownProps {
 }
 
 const CountdownTimer: React.FC<CountdownProps> = ({ targetDate }) => {
-  const calculateTimeLeft = () => {
+  const calculateTimeLeft = (targetDate: string): { days: number; hours: number; minutes: number; seconds: number } => {
     const difference = new Date(targetDate).getTime() - new Date().getTime();
-    let timeLeft = {};
+    const timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
 
     if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
+      timeLeft.days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      timeLeft.hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      timeLeft.minutes = Math.floor((difference / 1000 / 60) % 60);
+      timeLeft.seconds = Math.floor((difference / 1000) % 60);
     }
 
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    const calculateAndUpdateTime = () => {
+      const newTimeLeft = calculateTimeLeft(targetDate);
+      setTimeLeft(newTimeLeft);
+    };
 
-    return () => clearTimeout(timer);
-  });
+    calculateAndUpdateTime();
+
+    const intervalId = setInterval(calculateAndUpdateTime, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [targetDate]);
 
   return (
     <div className="flex space-x-2">
