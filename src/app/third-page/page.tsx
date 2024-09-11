@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar/Navbar";
-import ProductComponent from "../second-page/ProductComponent";
+import ProductComponent from "./ProductComponent";
 
 function ThirdPage() {
     return (
