@@ -4,9 +4,9 @@ import { FaGooglePlay, FaApple } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="py-12">
+        <footer className="py-12 mt-20">
             {/* Main Footer Section */}
-            <div className="container mx-auto px-6 md:px-12 lg:px-16">
+            <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-8 mb-8">
                     {/* First Section - About Us */}
                     <div className="col-span-2">
