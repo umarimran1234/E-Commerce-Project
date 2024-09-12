@@ -3,6 +3,7 @@ import ProductComponent from "./ProductComponent";
 import ProductTabs from "./ProductTabs";
 import RelatedProducts from "./RelatedProducts";
 import SuperDiscount from "./SuperDiscount";
+import Footer from "@/components/Footer/Footer";
 
 function ThirdPage() {
     return (
@@ -12,6 +13,7 @@ function ThirdPage() {
             <ProductTabs></ProductTabs>
             <RelatedProducts></RelatedProducts>
             <SuperDiscount></SuperDiscount>
+            <Footer></Footer>
         </>
     )
 }
