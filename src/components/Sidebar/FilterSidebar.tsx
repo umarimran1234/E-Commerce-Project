@@ -1,6 +1,6 @@
-"use client"
-import React from 'react';
-import Sidebar from './Sidebar';
+"use client";
+import React from "react";
+import Sidebar from "./Sidebar";
 
 const FilterSidebar = () => {
   const filterData = [
@@ -10,8 +10,8 @@ const FilterSidebar = () => {
         { label: "Mobile accessory", value: "mobile-accessory" },
         { label: "Electronics", value: "electronics" },
         { label: "Smartphones", value: "smartphones" },
-        { label: "Modern tech", value: "modern-tech" }
-      ]
+        { label: "Modern tech", value: "modern-tech" },
+      ],
     },
     {
       name: "Brands",
@@ -20,12 +20,12 @@ const FilterSidebar = () => {
         { label: "Apple", value: "apple" },
         { label: "Huawei", value: "huawei" },
         { label: "Poco", value: "poco" },
-        { label: "Lenovo", value: "lenovo" }
-      ]
-    }
+        { label: "Lenovo", value: "lenovo" },
+      ],
+    },
   ];
 
-  const handleFilterChange = (selectedFilters: string[]) => {
+  const handleFilterChange = () => {
     // console.log('Selected filters:', selectedFilters);
     // Implement your filtering logic here based on the selected filters
   };
