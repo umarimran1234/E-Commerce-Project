@@ -5,7 +5,7 @@ import { RiLockFill } from "react-icons/ri";
 function PaymentPromotion() {
     return (
         <div className="container mx-auto mt-10">
-            <div className="flex gap-8">
+            <div className="flex gap-16">
                 <div className="flex items-center gap-2">
                     <RiLockFill className="rounded-full border-2 bg-gray-300 text-4xl p-1" />
                     <div>
@@ -16,14 +16,14 @@ function PaymentPromotion() {
                 <div className="flex items-center gap-2">
                     <MdMessage className="rounded-full border-2 bg-gray-300 text-4xl p-1" />
                     <div>
-                        <p>Secure Payment</p>
-                        <p className="text-gray-500">Have you ever finally just</p>
+                        <p>Customer support</p>
+                        <p className="text-gray-500">Have you ever finally just </p>
                     </div>
                 </div>
                 <div className="flex items-center gap-2">
                     <CiDeliveryTruck className="rounded-full border-2 bg-gray-300 text-4xl p-1" />
                     <div>
-                        <p>Secure Payment</p>
+                        <p>Free delivery</p>
                         <p className="text-gray-500">Have you ever finally just</p>
                     </div>
                 </div>
