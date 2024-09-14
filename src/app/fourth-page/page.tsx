@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 import ShoppingCart from "./ShoppingCart"
 import PaymentPromotion from "./PaymentPromotion";
+import SavedForLater from "./SavedForLater";
 
 function FourthPage() {
     return (
@@ -8,6 +9,7 @@ function FourthPage() {
             <Navbar></Navbar>
             <ShoppingCart></ShoppingCart>
             <PaymentPromotion></PaymentPromotion>
+            <SavedForLater></SavedForLater>
         </>
     )
 }
