@@ -7,7 +7,7 @@ function SuperDiscount(){
                     <p>Have you ever finally just write dummy info</p>
                 </div>
                 <div className="bg-[#005ADE] w-full md:w-1/2 flex justify-center md:justify-end rounded-r-lg md:rounded-l-none rounded-l-lg p-2 md:p-8">
-                    <button className="text-white bg-[#FF9017] py-2 px-4 rounded-lg">Shop now</button>
+                    <button className="text-white bg-[#FF9017] font-medium py-2 px-4 rounded-lg">Shop now</button>
                 </div>
             </div>
         </div>
