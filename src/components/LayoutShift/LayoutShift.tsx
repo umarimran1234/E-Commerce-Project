@@ -57,7 +57,7 @@ function LayoutShift() {
     return (
         <>
             <div className='container mx-auto'>
-                <div className="flex items-center gap-1 border-2 p-2 md:items-center md:gap-2 flex-col rounded-lg lg:flex-row lg:justify-between mt-10">
+                <div className="flex items-center gap-1 border-2 p-2 md:items-center md:gap-2 flex-col rounded-lg lg:flex-row lg:justify-between mt-20">
                     <p className="">12,911 items in <span className='font-semibold'>Mobile accessory</span></p>
                     <div className="flex gap-2 items-center md:space-x-4">
                         <div className="flex items-center">

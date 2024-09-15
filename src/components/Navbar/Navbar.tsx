@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
 
             {/* Dropdown menu for mobile/tablet */}
             {menuOpen && (
-                <nav className="lg:hidden bg-white shadow-md transition-transform duration-300">
+                <nav className="lg:hidden z-50 bg-white shadow-md transition-transform duration-300">
                     <ul className="flex flex-col items-start space-y-2 px-4 py-2">
                         <li>
                             <Link href="#" className="block text-gray-700 hover:text-blue-500">All Category</Link>
