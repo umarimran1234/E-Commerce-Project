@@ -9,11 +9,13 @@ function SecondPage() {
     return (
         <>
             <Navbar></Navbar>
-            <div className="flex md:gap-8">
-                <FilterSidebar></FilterSidebar>
-                <div className="md:w-9/12 w-8/12">
-                    <LayoutShift></LayoutShift>
-                    <Navigation></Navigation>
+            <div className="container mx-auto">
+                <div className="flex justify-center md:gap-8">
+                    <FilterSidebar></FilterSidebar>
+                    <div className="md:w-9/12">
+                        <LayoutShift></LayoutShift>
+                        <Navigation></Navigation>
+                    </div>
                 </div>
             </div>
             <Subscribe></Subscribe>
