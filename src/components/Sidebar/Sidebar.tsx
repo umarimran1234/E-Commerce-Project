@@ -51,7 +51,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
     return (
         <div className="container mx-auto mt-5">
             {/* Hamburger Menu */}
-            <div className="md:hidden fixed top-14 left-4 z-50" title='Filter'>
+            <div className="md:hidden inline" title='Filter'>
                 {!isSidebarOpen && ( // Only show the hamburger button when the sidebar is closed
                     <button
                         className="text-3xl"
