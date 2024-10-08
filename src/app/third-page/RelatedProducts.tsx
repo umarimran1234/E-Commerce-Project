@@ -8,11 +8,11 @@ type Product = {
 };
 
 const relatedProducts: Product[] = [
-    { id: 1, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: 'https://picsum.photos/128' },
-    { id: 2, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: 'https://picsum.photos/128' },
-    { id: 3, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: 'https://picsum.photos/128' },
-    { id: 4, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: 'https://picsum.photos/128' },
-    { id: 5, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: 'https://picsum.photos/128' },
+    { id: 1, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: '/images/BlueBag.png' },
+    { id: 2, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: '/images/Watch.png' },
+    { id: 3, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: '/images/WhiteHeadphone.png' },
+    { id: 4, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: '/images/Short.png' },
+    { id: 5, name: 'Xiaomi Redmi 8 Original', priceRange: '$32.00–$40.00', imageUrl: '/images/Kettle.png' },
 ];
 
 const RelatedProducts: React.FC = () => {
@@ -29,7 +29,7 @@ const RelatedProducts: React.FC = () => {
                             <img
                                 src={product.imageUrl}
                                 alt={product.name}
-                                className="w-full p-2 h-32 bg-gray-100 mx-auto rounded-lg object-contain mb-2"
+                                className="w-full p-2 h-32 border-gray-100 border mx-auto rounded-lg object-contain mb-2"
                             />
                             <h3 className="text-sm font-medium">{product.name}</h3>
                             <p className="text-gray-500 text-sm">{product.priceRange}</p>

@@ -44,12 +44,12 @@ const ProductComponent: React.FC = () => {
         warranty: '2 years full warranty',
         supplier: { name: 'Guanjoi Trading LLC', location: 'Germany, Berlin' },
         images: [
-            'https://picsum.photos/380',
-            'https://picsum.photos/380',
-            'https://picsum.photos/380',
-            'https://picsum.photos/380',
-            'https://picsum.photos/380',
-            'https://picsum.photos/380',
+            '/images/WhiteShirt.jpeg',
+            '/images/WhiteShirt.jpeg',
+            '/images/WhiteShirt.jpeg',
+            '/images/WhiteShirt.jpeg',
+            '/images/WhiteShirt.jpeg',
+            '/images/WhiteShirt.jpeg',
         ],
     };
 

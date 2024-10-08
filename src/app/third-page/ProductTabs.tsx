@@ -102,14 +102,14 @@ const ProductTabs = () => {
                 <h2 className="text-xl font-semibold mb-4">You may like</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
                     <div className="flex items-center space-x-4">
-                        <img src="https://picsum.photos/56" alt="Product 1" className="w-14 p-2 border-2 border-gray-200 rounded-lg h-14 object-cover hover:opacity-75" />
+                        <img src="/images/Suit.png" alt="Product 1" className="w-14 p-2 border-2 border-gray-200 rounded-lg h-14 object-cover hover:opacity-75" />
                         <div>
                             <h3 className="text-gray-800 font-semibold">Men Blazers Sets Elegant Formal</h3>
                             <p className="text-gray-500">$7.00 - $99.50</p>
                         </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <img src="https://picsum.photos/56" alt="Product 2" className="w-14 p-2 border-2 border-gray-200 rounded-lg h-14 object-cover hover:opacity-75" />
+                        <img src="/images/T-Shirt.png" alt="Product 2" className="w-14 p-2 border-2 border-gray-200 rounded-lg h-14 object-cover hover:opacity-75" />
                         <div>
                             <h3 className="text-gray-800 font-semibold">Men Shirt Sleeve Polo Contrast</h3>
                             <p className="text-gray-500">$7.00 - $99.50</p>
