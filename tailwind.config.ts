@@ -13,7 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       backgroundImage: {
-        'banner': "url('https://picsum.photos/730/350')"
+        'banner': "url('/images/Banner.png')"
       }
     },
   },

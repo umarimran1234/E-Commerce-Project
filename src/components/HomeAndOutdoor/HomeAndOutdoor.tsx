@@ -9,9 +9,9 @@ const HomeAndOutdoor = () => {
                     {/* Left Section - Background Image, Title, and Button */}
                     <div
                         id="backimg"
-                        className="w-full lg:w-1/5  h-[24rem]  bg-cover bg-center p-4 "
+                        className="w-full lg:w-1/5  h-[40rem]  bg-cover bg-center p-4 "
                         style={{
-                            backgroundImage: `url("https://picsum.photos/300/300")`,
+                            backgroundImage: `url("/images/OutdoorBg.jpeg")`,
                         }}
                     >
                         <h2 className="text-3xl font-bold mb-4">Home and outdoor</h2>
@@ -30,7 +30,7 @@ const HomeAndOutdoor = () => {
                             </div>
                             <div className="flex justify-end  item-start">
                                 <img
-                                    src="https://picsum.photos/100"
+                                    src="/images/Chair.png"
                                     alt="Soft chairs"
                                     className=" mb-4"
                                 />
@@ -45,7 +45,7 @@ const HomeAndOutdoor = () => {
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
+                                    src="/images/Lamp.png"
                                     alt="Sofa & chair"
                                     className=" mb-4"
                                 />
@@ -60,7 +60,7 @@ const HomeAndOutdoor = () => {
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
+                                    src="/images/Dish.png"
                                     alt="Kitchen dishes"
                                     className=" mb-4"
                                 />
@@ -75,7 +75,7 @@ const HomeAndOutdoor = () => {
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
+                                    src="/images/Plate.png"
                                     alt="Smart watches"
                                     className=" mb-4"
                                 />
@@ -90,7 +90,7 @@ const HomeAndOutdoor = () => {
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
+                                    src="/images/Mixer.png"
                                     alt="Kitchen mixer"
                                     className=" mb-4"
                                 />

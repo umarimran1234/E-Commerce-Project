@@ -2,11 +2,11 @@ import React from 'react';
 import CountdownTimer from './CountDown';
 
 const deals = [
-  { name: 'Smart watches', discount: '25%', imgSrc: 'https://picsum.photos/400/300' },
-  { name: 'Laptops', discount: '15%', imgSrc: 'https://picsum.photos/400/300' },
-  { name: 'GoPro cameras', discount: '40%', imgSrc: 'https://picsum.photos/400/300' },
-  { name: 'Headphones', discount: '25%', imgSrc: 'https://picsum.photos/400/300' },
-  { name: 'Canon cameras', discount: '25%', imgSrc: 'https://picsum.photos/400/300' },
+  { name: 'Smart watches', discount: '25%', imgSrc: '/images/Watch.png' },
+  { name: 'Laptops', discount: '15%', imgSrc: '/images/Laptop.png' },
+  { name: 'GoPro cameras', discount: '40%', imgSrc: '/images/Canon.png' },
+  { name: 'Headphones', discount: '25%', imgSrc: '/images/Headphone.png' },
+  { name: 'Canon cameras', discount: '25%', imgSrc: '/images/Smartphone.png' },
 ];
 
 const DealsSection: React.FC = () => {
