@@ -9,7 +9,7 @@ const HomeAndOutdoor = () => {
                     {/* Left Section - Background Image, Title, and Button */}
                     <div
                         id="backimg"
-                        className="w-full lg:w-1/5  h-[40rem]  bg-cover bg-center p-4 "
+                        className="w-full lg:w-1/5  h-[44rem]  bg-cover bg-center p-4 "
                         style={{
                             backgroundImage: `url("/images/OutdoorBg.jpeg")`,
                         }}
@@ -105,7 +105,7 @@ const HomeAndOutdoor = () => {
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
+                                    src="/images/Blender.png"
                                     alt="Blenders"
                                     className=" mb-4"
                                 />
@@ -119,7 +119,7 @@ const HomeAndOutdoor = () => {
                             <p className="text-xs text-gray-500">From USD 19</p>
                             <div className="flex justify-end">
                                 <img
-                                    src="https://picsum.photos/100"
+                                    src="/images/MoneyBag.png"
                                     alt="Home appliance"
                                     className=" mb-4"
                                 />
@@ -132,7 +132,7 @@ const HomeAndOutdoor = () => {
                             <p className="text-xs text-gray-500">From USD 10</p>
                             <div className="flex justify-end">
                                 <img
-                                    src="https://picsum.photos/100"
+                                    src="/images/Tree.png"
                                     alt="Coffee maker"
                                     className=" mb-4"
                                 />

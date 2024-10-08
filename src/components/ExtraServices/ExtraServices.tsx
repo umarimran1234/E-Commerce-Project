@@ -9,10 +9,10 @@ type Service = {
 };
 
 const extraServices: Service[] = [
-  { id: 1, title: 'Source from Industry Hubs', description: 'Source from Industry Hubs', image: 'https://picsum.photos/400/300', icon: '🔍' },
-  { id: 2, title: 'Customize Your Products', description: 'Customize Your Products', image: 'https://picsum.photos/400/300', icon: '📦' },
-  { id: 3, title: 'Fast, reliable shipping by ocean or air', description: 'Fast, reliable shipping by ocean or air', image: 'https://picsum.photos/400/300', icon: '✈️' },
-  { id: 4, title: 'Product monitoring and inspection', description: 'Product monitoring and inspection', image: 'https://picsum.photos/400/300', icon: '🛡️' },
+  { id: 1, title: 'Source from Industry Hubs', description: 'Source from Industry Hubs', image: '/images/Box.png', icon: '🔍' },
+  { id: 2, title: 'Customize Your Products', description: 'Customize Your Products', image: '/images/Color.png', icon: '📦' },
+  { id: 3, title: 'Fast, reliable shipping by ocean or air', description: 'Fast, reliable shipping by ocean or air', image: '/images/Plane.png', icon: '✈️' },
+  { id: 4, title: 'Product monitoring and inspection', description: 'Product monitoring and inspection', image: '/images/Checker.png', icon: '🛡️' },
 ];
 
 const ExtraServices: React.FC = () => {

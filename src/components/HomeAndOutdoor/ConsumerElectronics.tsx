@@ -9,9 +9,9 @@ const ConsumerElectronics = () => {
                     {/* Left Section - Background Image, Title, and Button */}
                     <div
                         id="backimg"
-                        className="w-full lg:w-1/5  h-[24rem]  bg-cover bg-center p-4 "
+                        className="w-full lg:w-1/5  h-[41rem]  bg-cover bg-center p-4 "
                         style={{
-                            backgroundImage: `url("https://picsum.photos/300/300")`,
+                            backgroundImage: `url("/images/Consumer.png")`,
                         }}
                     >
                         <h2 className="text-3xl font-bold mb-4">Consumer electronics and gadgets</h2>
@@ -25,13 +25,13 @@ const ConsumerElectronics = () => {
                         {/* Product 1 */}
                         <div className="bg-white border-l-2 border-b-2 p-4 text-start">
                             <div className="">
-                                <p className="text-sm font-semibold">Soft chairs</p>
+                                <p className="text-sm font-semibold">Smart Watches</p>
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end  item-start">
                                 <img
-                                    src="https://picsum.photos/100"
-                                    alt="Soft chairs"
+                                    src="/images/Watch.png"
+                                    alt="Smart Watches"
                                     className=" mb-4"
                                 />
                             </div>
@@ -40,13 +40,13 @@ const ConsumerElectronics = () => {
                         {/* Product 2 */}
                         <div className="bg-white border-l-2 border-b-2 p-4 text-start">
                             <div>
-                                <p className="text-sm font-semibold">Sofa & chair</p>
+                                <p className="text-sm font-semibold">Cameras</p>
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
-                                    alt="Sofa & chair"
+                                    src="/images/Canon.png"
+                                    alt="Cameras"
                                     className=" mb-4"
                                 />
                             </div>
@@ -55,13 +55,13 @@ const ConsumerElectronics = () => {
                         {/* Product 3 */}
                         <div className="bg-white border-l-2 border-b-2 p-4 text-start">
                             <div className="mb-2">
-                                <p className="text-sm font-semibold">Kitchen dishes</p>
+                                <p className="text-sm font-semibold">Headphones</p>
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
-                                    alt="Kitchen dishes"
+                                    src="/images/WhiteHeadphone.png"
+                                    alt="Headphones"
                                     className=" mb-4"
                                 />
                             </div>
@@ -75,7 +75,7 @@ const ConsumerElectronics = () => {
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
+                                    src="/images/Kettle.png"
                                     alt="Smart watches"
                                     className=" mb-4"
                                 />
@@ -85,13 +85,13 @@ const ConsumerElectronics = () => {
                         {/* Product 5 */}
                         <div className="bg-white border-l-2 md:border-b-0 border-b-2 p-4 text-start">
                             <div>
-                                <p className="text-sm font-semibold">Kitchen mixer</p>
+                                <p className="text-sm font-semibold">Gaming Set</p>
                                 <p className="text-xs text-gray-500">From USD 100</p>
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
-                                    alt="Kitchen mixer"
+                                    src="/images/Headphone.png"
+                                    alt="Gaming Set"
                                     className=" mb-4"
                                 />
                             </div>
@@ -100,13 +100,13 @@ const ConsumerElectronics = () => {
                         {/* Product 6 */}
                         <div className="bg-white border-l-2 md:border-b-0 border-b-2 p-4 text-start">
                             <div>
-                                <p className="text-sm font-semibold">Blenders</p>
+                                <p className="text-sm font-semibold">Laptop & PC</p>
                                 <p className="text-xs text-gray-500">From USD 39</p>
                             </div>
                             <div className="flex justify-end item-start">
                                 <img
-                                    src="https://picsum.photos/100"
-                                    alt="Blenders"
+                                    src="/images/Laptop.png"
+                                    alt="Laptop & PC"
                                     className=" mb-4"
                                 />
                             </div>
@@ -115,12 +115,12 @@ const ConsumerElectronics = () => {
                         {/* Product 7 */}
 
                         <div className="bg-white border-l-2 p-4 text-start">
-                            <p className="text-sm font-semibold">Home appliance</p>
+                            <p className="text-sm font-semibold">Smart Phones</p>
                             <p className="text-xs text-gray-500">From USD 19</p>
                             <div className="flex justify-end">
                                 <img
-                                    src="https://picsum.photos/100"
-                                    alt="Home appliance"
+                                    src="/images/Tablet.png"
+                                    alt="Smart Phones"
                                     className=" mb-4"
                                 />
                             </div>
@@ -128,12 +128,12 @@ const ConsumerElectronics = () => {
 
                         {/* Product 8 */}
                         <div className="bg-white border-l-2 p-4 text-start">
-                            <p className="text-sm font-semibold">Coffee maker</p>
+                            <p className="text-sm font-semibold">Electric Kettle</p>
                             <p className="text-xs text-gray-500">From USD 10</p>
                             <div className="flex justify-end">
                                 <img
-                                    src="https://picsum.photos/100"
-                                    alt="Coffee maker"
+                                    src="/images/iPhone.png"
+                                    alt="Electric Kettle"
                                     className=" mb-4"
                                 />
                             </div>
