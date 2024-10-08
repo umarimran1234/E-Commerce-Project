@@ -14,7 +14,7 @@ interface ProductProps {
 const products = [
     {
         name: 'Canon Cmera EOS 2000, Black 10x zoom',
-        image: 'https://picsum.photos/300/300',
+        image: '/images/iPhone.png',
         price: 998,
         rating: 7.5,
         orders: 154,
@@ -22,7 +22,7 @@ const products = [
     },
     {
         name: 'Canon Cmera EOS 2000, Black 10x zoom',
-        image: 'https://picsum.photos/300/300',
+        image: '/images/Smartphone.png',
         price: 998,
         rating: 7.5,
         orders: 154,
@@ -30,7 +30,7 @@ const products = [
     },
     {
         name: 'Canon Cmera EOS 2000, Black 10x zoom',
-        image: 'https://picsum.photos/300/300',
+        image: '/images/Tablet.png',
         price: 998,
         rating: 7.5,
         orders: 154,
@@ -78,7 +78,7 @@ function LayoutShift() {
             <div className="container mx-auto mt-10">
                 <div className={`grid ${!isGrid ? "gap-8 grid-cols-1" : "lg:grid-cols-3 md:grid-cols-2 gap-4"}`}>
                     {products.map((product, index) => (
-                        <div key={index} className="bg-white border-2 border-gray-300 rounded-lg shadow-md overflow-hidden">
+                        <div key={index} className="bg-white border-2 p-4 border-gray-300 rounded-lg shadow-md overflow-hidden">
                             <div className={`flex ${!isGrid ? "md:flex-row flex-col" : "flex-col"}`}>
                                 <img src={product?.image} alt={product?.name} className={`${!isGrid ? "w-fit mx-auto md:mx-0 h-48 object-cover" : ""}`} />
                                 <div className="p-4">
