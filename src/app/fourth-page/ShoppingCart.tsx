@@ -24,7 +24,7 @@ const ShoppingCart = () => {
             name: 'T-shirts with multiple colors, for men and lady',
             price: 78.99,
             quantity: 9,
-            image: 'https://picsum.photos/96', // Placeholder image path
+            image: '/images/T-Shirt.png', // Placeholder image path
             size: 'medium',
             color: 'blue',
             material: 'Plastic',
@@ -35,7 +35,7 @@ const ShoppingCart = () => {
             name: 'T-shirts with multiple colors, for men and lady',
             price: 39.0,
             quantity: 3,
-            image: 'https://picsum.photos/96', // Placeholder image path
+            image: '/images/SchoolBag.png', // Placeholder image path
             size: 'medium',
             color: 'blue',
             material: 'Plastic',
@@ -46,7 +46,7 @@ const ShoppingCart = () => {
             name: 'Lamp with modern design',
             price: 170.5,
             quantity: 1,
-            image: 'https://picsum.photos/96', // Placeholder image path
+            image: '/images/Lamp.png', // Placeholder image path
             size: 'medium',
             color: 'blue',
             material: 'Plastic',

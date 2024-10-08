@@ -15,28 +15,28 @@ const products: Product[] = [
         name: 'GoPro HERO6 4K Action Camera - Black',
         price: '$99.50',
         description: 'GoPro HERO6 4K Action Camera - Black',
-        image: 'https://picsum.photos/160', // Replace with actual image paths
+        image: '/images/Tablet.png', // Replace with actual image paths
     },
     {
         id: 2,
         name: 'iPhone 12 - Blue',
         price: '$99.50',
         description: 'iPhone 12 - Blue',
-        image: 'https://picsum.photos/160',
+        image: '/images/BlueiPhone.png',
     },
     {
         id: 3,
         name: 'Smart Watch - Silver',
         price: '$99.50',
         description: 'Smart Watch - Silver',
-        image: 'https://picsum.photos/160',
+        image: '/images/Watch.png',
     },
     {
         id: 4,
         name: 'MacBook Pro - Silver',
         price: '$99.50',
         description: 'MacBook Pro - Silver',
-        image: 'https://picsum.photos/160',
+        image: '/images/Laptop.png',
     },
 ];
 
@@ -53,7 +53,7 @@ const SavedForLater: React.FC = () => {
                         <img
                             src={product.image}
                             alt={product.name}
-                            className="w-full h-40 object-cover mb-4"
+                            className="w-full h-64 object-cover mb-4"
                         />
                         <h3 className="text-lg font-semibold">{product.price}</h3>
                         <p className="text-gray-500 mb-4">{product.description}</p>
