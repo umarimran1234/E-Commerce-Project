@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { MdOutlineShoppingCart } from 'react-icons/md';
 
@@ -50,9 +51,11 @@ const SavedForLater: React.FC = () => {
                         key={product.id}
                         className="border rounded-lg p-4 shadow-sm hover:shadow-lg transition-shadow duration-300"
                     >
-                        <img
+                        <Image
                             src={product.image}
                             alt={product.name}
+                            width="1000"
+                            height={1000}
                             className="w-full h-64 object-cover mb-4"
                         />
                         <h3 className="text-lg font-semibold">{product.price}</h3>

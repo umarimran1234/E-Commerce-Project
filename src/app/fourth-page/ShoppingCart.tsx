@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { useState } from 'react';
 import { FaApplePay, FaArrowLeft, FaPaypal } from 'react-icons/fa';
 import { RiMastercardFill, RiVisaLine } from 'react-icons/ri';
@@ -69,10 +70,12 @@ const ShoppingCart = () => {
                     <h2 className="text-2xl font-semibold mb-4">My cart ({cartItems.length})</h2>
                     {cartItems.map((item) => (
                         <div key={item.id} className="flex items-center border-b py-4">
-                            <img
+                            <Image
                                 src={item.image}
                                 alt={item.name}
                                 className="w-24 h-24 object-cover rounded-md mr-4"
+                                width={1000}
+                                height={1000}
                             />
                             <div className="flex-grow">
                                 <h3 className="font-medium">{item.name}</h3>
