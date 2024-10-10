@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { useState } from 'react';
 import { MdOutlineMessage, MdOutlineVerifiedUser } from 'react-icons/md';
 import { RiSailboatFill } from 'react-icons/ri';
@@ -58,10 +59,12 @@ const ProductComponent: React.FC = () => {
             <div className="grid border-gray-200 p-4 border-2 rounded-lg grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Left section: Image */}
                 <div className="space-y-4">
-                    <img src={product.images[selectedImage]} alt="Product" className="w-[380px] object-cover h-[380px] mx-auto border-2 border-gray-200 p-2 rounded-lg" />
+                    <Image width={380} height={380} src={product.images[selectedImage]} alt="Product" className="object-cover mx-auto border-2 border-gray-200 p-2 rounded-lg" />
                     <div className="grid grid-cols-6 gap-2">
                         {product.images.map((img, idx) => (
-                            <img
+                            <Image
+                                width={1000}
+                                height={1000}
                                 key={idx}
                                 src={img}
                                 alt={`Product thumbnail ${idx + 1}`}
@@ -134,10 +137,9 @@ const ProductComponent: React.FC = () => {
                             <span className='mt-2 text-gray-500 flex items-center gap-2'><MdOutlineVerifiedUser /> Verified Seller</span>
                             <span className='mt-2 text-gray-500 flex items-center gap-2'><TbWorld /> Worldwide Shipping</span>
                         </div>
-
                         <div className="flex flex-col gap-2 mt-4">
                             <button className="bg-blue-500 text-white px-4 py-1 font-semibold rounded">Send inquiry</button>
-                            <button className="border-2 border-gray-200 text-[#0D6EFD] font-medium px-4 py-1 rounded">Seller's profile</button>
+                            <button className="border-2 border-gray-200 text-[#0D6EFD] font-medium px-4 py-1 rounded">{"Seller's profile"}</button>
                         </div>
                     </div>
                 </div>

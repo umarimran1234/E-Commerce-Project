@@ -25,7 +25,7 @@ const FilterSidebar = () => {
     }
   ];
 
-  const handleFilterChange = (selectedFilters: string[]) => {
+  const handleFilterChange = () => {
     // console.log('Selected filters:', selectedFilters);
     // Implement your filtering logic here based on the selected filters
   };

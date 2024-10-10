@@ -1,5 +1,6 @@
 import React from 'react';
 import CountdownTimer from './CountDown';
+import Image from 'next/image';
 
 const deals = [
   { name: 'Smart watches', discount: '25%', imgSrc: '/images/Watch.png' },
@@ -27,7 +28,9 @@ const DealsSection: React.FC = () => {
           {deals.map((deal, index) => (
             <a href="/" key={index} className="group p-4 border-l border-gray-300 block text-center">
               <div className="relative">
-                <img
+                <Image
+                  width={1000}
+                  height={1000}
                   src={deal.imgSrc}
                   alt={deal.name}
                   className="w-full h-40 object-cover rounded-md group-hover:opacity-75 transition-opacity"

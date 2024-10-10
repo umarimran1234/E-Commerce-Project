@@ -1,11 +1,10 @@
 "use client"
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { FaHeart, FaShoppingBag } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
 import { MdAccountCircle, MdMessage } from 'react-icons/md';
 import { FaCartShopping } from 'react-icons/fa6';
 import { IoReorderThreeOutline } from 'react-icons/io5';
-import Image from 'next/image';
 
 const Navbar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);

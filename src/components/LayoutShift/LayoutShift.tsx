@@ -1,16 +1,7 @@
 "use client"
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { IoGridSharp, IoReorderThreeOutline } from 'react-icons/io5';
-
-interface ProductProps {
-    name: string;
-    image: string;
-    price: number;
-    rating: number;
-    orders: number;
-    description: string;
-}
-
 const products = [
     {
         name: 'Canon Cmera EOS 2000, Black 10x zoom',
@@ -80,7 +71,7 @@ function LayoutShift() {
                     {products.map((product, index) => (
                         <div key={index} className="bg-white border-2 p-4 border-gray-300 rounded-lg shadow-md overflow-hidden">
                             <div className={`flex ${!isGrid ? "md:flex-row flex-col" : "flex-col"}`}>
-                                <img src={product?.image} alt={product?.name} className={`${!isGrid ? "w-fit mx-auto md:mx-0 h-48 object-cover" : ""}`} />
+                                <Image width={1000} height={1000} src={product?.image} alt={product?.name} className={`${!isGrid ? "w-fit mx-auto md:mx-0 h-48 object-cover" : ""}`} />
                                 <div className="p-4">
                                     <h2 className="text-lg font-bold">{product?.name}</h2>
                                     <div className="flex md:flex-row flex-col justify-between">

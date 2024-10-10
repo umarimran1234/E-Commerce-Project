@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ConsumerElectronics = () => {
@@ -29,7 +30,9 @@ const ConsumerElectronics = () => {
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end  item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Watch.png"
                                     alt="Smart Watches"
                                     className=" mb-4"
@@ -44,7 +47,9 @@ const ConsumerElectronics = () => {
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Canon.png"
                                     alt="Cameras"
                                     className=" mb-4"
@@ -59,7 +64,9 @@ const ConsumerElectronics = () => {
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/WhiteHeadphone.png"
                                     alt="Headphones"
                                     className=" mb-4"
@@ -74,7 +81,9 @@ const ConsumerElectronics = () => {
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Kettle.png"
                                     alt="Smart watches"
                                     className=" mb-4"
@@ -89,7 +98,9 @@ const ConsumerElectronics = () => {
                                 <p className="text-xs text-gray-500">From USD 100</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Headphone.png"
                                     alt="Gaming Set"
                                     className=" mb-4"
@@ -104,7 +115,9 @@ const ConsumerElectronics = () => {
                                 <p className="text-xs text-gray-500">From USD 39</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    height={1000}
+                                    width={1000}
                                     src="/images/Laptop.png"
                                     alt="Laptop & PC"
                                     className=" mb-4"
@@ -118,7 +131,9 @@ const ConsumerElectronics = () => {
                             <p className="text-sm font-semibold">Smart Phones</p>
                             <p className="text-xs text-gray-500">From USD 19</p>
                             <div className="flex justify-end">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Tablet.png"
                                     alt="Smart Phones"
                                     className=" mb-4"
@@ -131,7 +146,9 @@ const ConsumerElectronics = () => {
                             <p className="text-sm font-semibold">Electric Kettle</p>
                             <p className="text-xs text-gray-500">From USD 10</p>
                             <div className="flex justify-end">
-                                <img
+                                <Image
+                                    height={1000}
+                                    width={1000}
                                     src="/images/iPhone.png"
                                     alt="Electric Kettle"
                                     className=" mb-4"

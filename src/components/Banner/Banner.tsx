@@ -52,7 +52,7 @@ const Banner: React.FC = () => {
                 {/* User/Promotion Panel */}
                 <aside className="w-full md:w-1/5 p-4 flex flex-col gap-4">
                     <div className="bg-[#E3F0FF] p-4 rounded-lg">
-                        <h3 className='flex items-center gap-2'><MdAccountCircle className='text-4xl' /> Hi, user let's get started</h3>
+                        <h3 className='flex items-center gap-2'><MdAccountCircle className='text-4xl' /> {`Hi, user let's get started`}</h3>
                         <div className='flex flex-col'>
                             <button className="bg-[#127FFF] font-medimum text-white py-2 px-4 rounded-md mt-2">Join now</button>
                             <button className="bg-white text-[#0D6EFD] font-medium py-2 px-4 rounded-md mt-2">Log in</button>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const HomeAndOutdoor = () => {
@@ -29,11 +30,9 @@ const HomeAndOutdoor = () => {
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end  item-start">
-                                <img
-                                    src="/images/Chair.png"
+                                <Image width={1000} height={1000} src="/images/Chair.png"
                                     alt="Soft chairs"
-                                    className=" mb-4"
-                                />
+                                    className=" mb-4" />
                             </div>
                         </div>
 
@@ -44,7 +43,9 @@ const HomeAndOutdoor = () => {
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Lamp.png"
                                     alt="Sofa & chair"
                                     className=" mb-4"
@@ -59,7 +60,9 @@ const HomeAndOutdoor = () => {
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Dish.png"
                                     alt="Kitchen dishes"
                                     className=" mb-4"
@@ -74,7 +77,9 @@ const HomeAndOutdoor = () => {
                                 <p className="text-xs text-gray-500">From USD 19</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Plate.png"
                                     alt="Smart watches"
                                     className=" mb-4"
@@ -89,7 +94,9 @@ const HomeAndOutdoor = () => {
                                 <p className="text-xs text-gray-500">From USD 100</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Mixer.png"
                                     alt="Kitchen mixer"
                                     className=" mb-4"
@@ -104,7 +111,9 @@ const HomeAndOutdoor = () => {
                                 <p className="text-xs text-gray-500">From USD 39</p>
                             </div>
                             <div className="flex justify-end item-start">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Blender.png"
                                     alt="Blenders"
                                     className=" mb-4"
@@ -118,7 +127,9 @@ const HomeAndOutdoor = () => {
                             <p className="text-sm font-semibold">Home appliance</p>
                             <p className="text-xs text-gray-500">From USD 19</p>
                             <div className="flex justify-end">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/MoneyBag.png"
                                     alt="Home appliance"
                                     className=" mb-4"
@@ -131,7 +142,9 @@ const HomeAndOutdoor = () => {
                             <p className="text-sm font-semibold">Coffee maker</p>
                             <p className="text-xs text-gray-500">From USD 10</p>
                             <div className="flex justify-end">
-                                <img
+                                <Image
+                                    width={1000}
+                                    height={1000}
                                     src="/images/Tree.png"
                                     alt="Coffee maker"
                                     className=" mb-4"

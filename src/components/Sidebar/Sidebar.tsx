@@ -28,10 +28,10 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
         onFilterChange(updatedFilters);
     };
 
-    const handleResetFilters = () => {
-        setSelectedFilters([]);
-        onFilterChange([]);
-    };
+    // const handleResetFilters = () => {
+    //     setSelectedFilters([]);
+    //     onFilterChange([]);
+    // };
 
     // Close sidebar on outside click
     useEffect(() => {

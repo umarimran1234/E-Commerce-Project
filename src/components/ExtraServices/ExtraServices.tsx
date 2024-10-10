@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 type Service = {
@@ -22,7 +23,7 @@ const ExtraServices: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {extraServices.map((service) => (
           <div key={service.id} className="relative border rounded-lg overflow-hidden">
-            <img src={service.image} alt={service.title} className="w-full h-32 object-cover" />
+            <Image width={1000} height={1000} src={service.image} alt={service.title} className="w-full h-32 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-medium">{service.title}</h3>
               <p className="text-sm">{service.description}</p>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 type Product = {
@@ -26,7 +27,9 @@ const RelatedProducts: React.FC = () => {
                             key={product.id}
                             className="p-2 rounded-lg hover:shadow-lg transition-shadow duration-300"
                         >
-                            <img
+                            <Image
+                                width={1000}
+                                height={1000}
                                 src={product.imageUrl}
                                 alt={product.name}
                                 className="w-full p-2 h-32 border-gray-100 border mx-auto rounded-lg object-contain mb-2"
