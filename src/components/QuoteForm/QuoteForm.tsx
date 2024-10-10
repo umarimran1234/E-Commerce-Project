@@ -66,7 +66,7 @@ const QuoteForm: React.FC = () => {
                             <textarea id="details" name="details" value={formData.details} placeholder='Type more details' onChange={handleTextareaChange} className="w-full border border-gray-300  rounded px-4 py-2 h-24" required />
                         </div>
                     </div>
-                    <div className="flex gap-2 lg:flex-row items-center mt-4">
+                    <div className="flex gap-2 md:flex-row flex-col items-center mt-4">
                         <input type="text" id="quantity" placeholder='Quantity' name="quantity" className="border placeholder-black text-black border-gray-300 rounded px-4 py-2" disabled />
                         <select id="unit" name="unit" value={formData.unit} onChange={handleSelectChange} className="border text-black border-gray-300 rounded px-4 py-2">
                             <option value="pcs">Pcs</option>

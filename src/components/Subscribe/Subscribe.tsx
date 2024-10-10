@@ -13,7 +13,7 @@ const Subscribe = () => {
                             <p className="mt-4 text-[#606060]">
                                 Get daily news on upcoming offers from many suppliers all over the world
                             </p>
-                            <div className="mt-6 flex mx-auto max-w-md gap-x-4">
+                            <div className="mt-6 flex md:flex-row flex-col mx-auto max-w-md gap-4">
                                 <label htmlFor="email-address" className="sr-only">
                                     Email address
                                 </label>
