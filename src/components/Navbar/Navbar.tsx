@@ -5,9 +5,19 @@ import { FaHeart } from 'react-icons/fa';
 import { MdAccountCircle, MdMessage } from 'react-icons/md';
 import { FaCartShopping } from 'react-icons/fa6';
 import { IoReorderThreeOutline } from 'react-icons/io5';
+import { useRouter } from 'next/navigation';
 
 const Navbar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const router = useRouter()
+
+    const handleChange = (event: any) => {
+        // console.log("Changed")
+        const selectedValue = event.target.value;
+        if (selectedValue !== "all") {
+            router.push(`/${selectedValue}`)
+        }
+    }
 
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
@@ -85,8 +95,11 @@ const Navbar: React.FC = () => {
                             <Link href="#" className="block text-gray-700 hover:text-blue-500">Menu Item</Link>
                         </li>
                         <li>
-                            <select className="w-full p-2 border border-gray-300">
+                            <select onChange={handleChange} className="w-full p-2 border border-gray-300">
                                 <option value="all">Help</option>
+                                <option value="second-page">Second Page</option>
+                                <option value="third-page">Third Page</option>
+                                <option value="fourth-page">Fourth Page</option>
                             </select>
                         </li>
                     </ul>
@@ -112,8 +125,11 @@ const Navbar: React.FC = () => {
                     <Link href="#">
                         <span className="text-gray-700 hover:text-blue-500">Menu Item</span>
                     </Link>
-                    <select>
+                    <select onChange={handleChange}>
                         <option value="all">Help</option>
+                        <option value="second-page">Second Page</option>
+                        <option value="third-page">Third Page</option>
+                        <option value="fourth-page">Fourth Page</option>
                     </select>
                 </div>
                 {/* Language and Shipping */}
