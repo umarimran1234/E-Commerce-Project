@@ -10,13 +10,13 @@ const ConsumerElectronics = () => {
                     {/* Left Section - Background Image, Title, and Button */}
                     <div
                         id="backimg"
-                        className="w-full lg:w-1/5  h-[41rem]  bg-cover bg-center p-4 "
+                        className="w-full lg:w-1/5  h-[21.6rem]  bg-cover bg-center p-4 "
                         style={{
                             backgroundImage: `url("/images/Consumer.png")`,
                         }}
                     >
                         <h2 className="text-3xl font-bold mb-4">Consumer electronics and gadgets</h2>
-                        <button className="bg-white px-4 py-2 rounded-full font-bold">
+                        <button className="bg-white px-4 py-2 rounded-lg font-bold">
                             Source now
                         </button>
                     </div>
@@ -35,7 +35,7 @@ const ConsumerElectronics = () => {
                                     height={1000}
                                     src="/images/Watch.png"
                                     alt="Smart Watches"
-                                    className=" mb-4"
+                                    className="w-20 mb-4"
                                 />
                             </div>
                         </div>
@@ -52,7 +52,7 @@ const ConsumerElectronics = () => {
                                     height={1000}
                                     src="/images/Canon.png"
                                     alt="Cameras"
-                                    className=" mb-4"
+                                    className="w-20 mb-4"
                                 />
                             </div>
                         </div>
@@ -69,7 +69,7 @@ const ConsumerElectronics = () => {
                                     height={1000}
                                     src="/images/WhiteHeadphone.png"
                                     alt="Headphones"
-                                    className=" mb-4"
+                                    className="w-20 mb-4"
                                 />
                             </div>
                         </div>
@@ -86,7 +86,7 @@ const ConsumerElectronics = () => {
                                     height={1000}
                                     src="/images/Kettle.png"
                                     alt="Smart watches"
-                                    className=" mb-4"
+                                    className="w-20 mb-4"
                                 />
                             </div>
                         </div>
@@ -103,7 +103,7 @@ const ConsumerElectronics = () => {
                                     height={1000}
                                     src="/images/Headphone.png"
                                     alt="Gaming Set"
-                                    className=" mb-4"
+                                    className="w-20 mb-4"
                                 />
                             </div>
                         </div>
@@ -120,7 +120,7 @@ const ConsumerElectronics = () => {
                                     width={1000}
                                     src="/images/Laptop.png"
                                     alt="Laptop & PC"
-                                    className=" mb-4"
+                                    className="w-20 mb-4"
                                 />
                             </div>
                         </div>
@@ -136,7 +136,7 @@ const ConsumerElectronics = () => {
                                     height={1000}
                                     src="/images/Tablet.png"
                                     alt="Smart Phones"
-                                    className=" mb-4"
+                                    className="w-20 mb-4"
                                 />
                             </div>
                         </div>
@@ -151,7 +151,7 @@ const ConsumerElectronics = () => {
                                     width={1000}
                                     src="/images/iPhone.png"
                                     alt="Electric Kettle"
-                                    className=" mb-4"
+                                    className="w-20 mb-4"
                                 />
                             </div>
                         </div>
