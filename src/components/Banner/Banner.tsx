@@ -108,7 +108,7 @@ const Banner: React.FC = () => {
               <li
                 key={tab}
                 className={`cursor-pointer p-2 ${
-                  activeTab === tab ? "bg-blue-200 font-medium rounded-lg" : ""
+                  activeTab === tab ? "bg-blue-200 text-[#1C1C1C] font-medium rounded-lg" : "text-gray-600"
                 }`}
                 onClick={() => setActiveTab(tab)}
               >
