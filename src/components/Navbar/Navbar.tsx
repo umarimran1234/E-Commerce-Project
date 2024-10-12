@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import { ChangeEvent } from 'react';
 import Link from 'next/link';
 import { FaHeart } from 'react-icons/fa';
 import { MdAccountCircle, MdMessage } from 'react-icons/md';
@@ -11,7 +12,7 @@ const Navbar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const router = useRouter()
 
-    const handleChange = (event: any) => {
+    const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
         // console.log("Changed")
         const selectedValue = event.target.value;
         if (selectedValue !== "all") {
