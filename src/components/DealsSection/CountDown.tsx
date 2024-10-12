@@ -43,7 +43,7 @@ const CountdownTimer: React.FC<CountdownProps> = ({ targetDate }) => {
   return (
     <div className="flex space-x-2">
       {Object.keys(timeLeft).map((interval, index) => (
-        <div key={index} className="flex flex-col bg-[#606060] px-2 rounded-lg text-white items-center">
+        <div key={index} className="flex flex-col bg-[#606060] py-2 px-3 rounded-lg text-white items-center">
           <span className="text-lg font-semibold">{timeLeft[interval as keyof typeof timeLeft] || '0'}</span>
           <span className="text-sm">{interval.charAt(0).toUpperCase() + interval.slice(1)}</span>
         </div>

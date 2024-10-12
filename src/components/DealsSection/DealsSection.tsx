@@ -1,13 +1,13 @@
-import React from 'react';
-import CountdownTimer from './CountDown';
-import Image from 'next/image';
+import React from "react";
+import CountdownTimer from "./CountDown";
+import Image from "next/image";
 
 const deals = [
-  { name: 'Smart watches', discount: '25%', imgSrc: '/images/Watch.png' },
-  { name: 'Laptops', discount: '15%', imgSrc: '/images/Laptop.png' },
-  { name: 'GoPro cameras', discount: '40%', imgSrc: '/images/Canon.png' },
-  { name: 'Headphones', discount: '25%', imgSrc: '/images/Headphone.png' },
-  { name: 'Canon cameras', discount: '25%', imgSrc: '/images/Smartphone.png' },
+  { name: "Smart watches", discount: "25%", imgSrc: "/images/Watch.png" },
+  { name: "Laptops", discount: "15%", imgSrc: "/images/Laptop.png" },
+  { name: "GoPro cameras", discount: "40%", imgSrc: "/images/Canon.png" },
+  { name: "Headphones", discount: "25%", imgSrc: "/images/Headphone.png" },
+  { name: "Canon cameras", discount: "25%", imgSrc: "/images/Smartphone.png" },
 ];
 
 const DealsSection: React.FC = () => {
@@ -26,7 +26,11 @@ const DealsSection: React.FC = () => {
         {/* Responsive Grid for Products */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {deals.map((deal, index) => (
-            <a href="/" key={index} className="group p-4 border-l border-gray-300 block text-center">
+            <a
+              href="/"
+              key={index}
+              className="group p-4 border-l border-gray-300 block text-center"
+            >
               <div className="relative">
                 <Image
                   width={1000}
@@ -35,11 +39,11 @@ const DealsSection: React.FC = () => {
                   alt={deal.name}
                   className="w-full h-40 object-cover rounded-md group-hover:opacity-75 transition-opacity"
                 />
-                <span className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm group-hover:bg-red-600 transition-colors">
-                  {deal.discount}
-                </span>
               </div>
-              <h3 className="mt-4 font-medium">{deal.name}</h3>
+              <h3 className="mt-4 mb-2 font-medium">{deal.name}</h3>
+              <span className="bg-[#FFE3E3] text-[#EB001B] px-2 py-1 rounded text-sm font-medium transition-colors">
+                -{deal.discount}
+              </span>
             </a>
           ))}
         </div>
