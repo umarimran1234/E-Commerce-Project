@@ -13,7 +13,8 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       backgroundImage: {
-        'banner': "url('/images/Banner.png')"
+        'banner': "url('/images/Banner.png')",
+        "stock": "url('/images/Stock.png')"
       }
     },
   },
