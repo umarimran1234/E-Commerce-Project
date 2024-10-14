@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import { MdOutlineEmail } from "react-icons/md";
 
 const Subscribe = () => {
     return (
@@ -17,12 +19,13 @@ const Subscribe = () => {
                                 <label htmlFor="email-address" className="sr-only">
                                     Email address
                                 </label>
+                                <MdOutlineEmail className="text-2xl absolute bottom-10 pl-2 z-50" />
                                 <input
                                     id="email-address"
                                     name="email"
                                     type="email"
                                     required
-                                    className="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                                    className="min-w-0 relative flex-auto rounded-md border-0 px-8 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                                     placeholder="Email"
                                 />
                                 <button
