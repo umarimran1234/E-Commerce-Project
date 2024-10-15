@@ -2,12 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import {
-  FaGooglePlay,
-  FaApple,
   FaFacebook,
   FaInstagram,
   FaYoutube,
-  FaChevronDown,
   FaAngleUp,
 } from "react-icons/fa";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
