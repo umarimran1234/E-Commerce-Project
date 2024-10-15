@@ -4,11 +4,13 @@ import Navbar from "@/components/Navbar/Navbar";
 import Navigation from "@/components/Navigation/Navigation";
 import FilterSidebar from "@/components/Sidebar/FilterSidebar";
 import Subscribe from "@/components/Subscribe/Subscribe";
+import Breadcrumb from "./breadcumb";
 
 function SecondPage() {
     return (
         <>
             <Navbar></Navbar>
+            <Breadcrumb></Breadcrumb>
             <div className="container mx-auto">
                 <div className="flex justify-center md:gap-8">
                     <FilterSidebar></FilterSidebar>

@@ -48,7 +48,7 @@ function LayoutShift() {
     return (
         <>
             <div className='container mx-auto'>
-                <div className="flex items-center gap-1 border-2 md:p-2 py-2 md:items-center md:gap-2 flex-col rounded-lg lg:flex-row lg:justify-between mt-20">
+                <div className="flex bg-white items-center gap-1 border-2 md:p-2 py-2 md:items-center md:gap-2 flex-col rounded-lg lg:flex-row lg:justify-between mt-4">
                     <p className="">12,911 items in <span className='font-semibold'>Mobile accessory</span></p>
                     <div className="flex gap-2 items-center md:space-x-4">
                         <div className="flex items-center">
@@ -76,12 +76,12 @@ function LayoutShift() {
                                     <h2 className="text-lg font-bold">{product?.name}</h2>
                                     <div className="flex md:flex-row flex-col justify-between">
                                         <div>
-                                            <p className="text-2xl mt-2 font-semibold text-blue-500">${product?.price.toFixed(2)}</p>
+                                            <p className="text-2xl mt-2 font-semibold">${product?.price.toFixed(2)}</p>
                                             <p className="text-gray-400">
                                                 <span className="text-yellow-500">★★★★★</span> {product?.rating}
                                             </p>
                                         </div>
-                                        <div className='flex gap-2 pt-6'>
+                                        <div className='flex gap-2 pt-10'>
                                             <p className="text-gray-400">Orders: {product?.orders}</p>
                                             <p className='text-[#00B517]'>Free Shipping</p>
                                         </div>
