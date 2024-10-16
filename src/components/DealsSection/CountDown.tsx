@@ -6,20 +6,20 @@ interface CountdownProps {
 }
 
 const CountdownTimer: React.FC<CountdownProps> = ({ targetDate }) => {
-  const calculateTimeLeft = (targetDate: string): { days: number; hours: number; minutes: number; seconds: number } => {
+  const calculateTimeLeft = (targetDate: string): { days: number; hour: number; min: number; sec: number } => {
     const difference = new Date(targetDate).getTime() - new Date().getTime();
     const timeLeft = {
       days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
+      hour: 0,
+      min: 0,
+      sec: 0,
     };
 
     if (difference > 0) {
       timeLeft.days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      timeLeft.hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-      timeLeft.minutes = Math.floor((difference / 1000 / 60) % 60);
-      timeLeft.seconds = Math.floor((difference / 1000) % 60);
+      timeLeft.hour = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      timeLeft.min = Math.floor((difference / 1000 / 60) % 60);
+      timeLeft.sec = Math.floor((difference / 1000) % 60);
     }
 
     return timeLeft;
@@ -43,7 +43,7 @@ const CountdownTimer: React.FC<CountdownProps> = ({ targetDate }) => {
   return (
     <div className="flex space-x-2">
       {Object.keys(timeLeft).map((interval, index) => (
-        <div key={index} className="flex flex-col bg-[#606060] py-2 px-3 rounded-lg text-white items-center">
+        <div key={index} className="flex flex-col bg-[#606060] w-[45px] h-[50px] rounded-md text-white items-center">
           <span className="text-lg font-semibold">{timeLeft[interval as keyof typeof timeLeft] || '0'}</span>
           <span className="text-sm">{interval.charAt(0).toUpperCase() + interval.slice(1)}</span>
         </div>
