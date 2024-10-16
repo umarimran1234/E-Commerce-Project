@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import ReactSlider from 'react-slider';
 
 interface FilterItem {
     label: string;
@@ -19,6 +20,27 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
     const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState<boolean>(true);
+    const [range, setRange] = useState<[number, number]>([0, 999999]);
+
+    const toggleAccordion = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const handleRangeChange = (values: [number, number]) => {
+        setRange(values);
+    };
+
+    // Handle Min/Max input changes
+    const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = Number(e.target.value);
+        setRange([value, range[1]]);
+    };
+
+    const handleMaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = Number(e.target.value);
+        setRange([range[0], value]);
+    };
 
     const handleFilterChange = (value: string) => {
         const updatedFilters = selectedFilters.includes(value)
@@ -70,62 +92,198 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
 
                 {/* Category Filters */}
                 <div className="category-filters">
+
                     {data.map((category) => (
-                        <div key={category.name} className="mb-4">
-                            <h3 className="text-lg border-t-2 font-semibold mb-2">{category.name}</h3>
-                            <ul className="space-y-2">
-                                {category.options.map((option) => (
-                                    <li key={option.value}>
-                                        <input
-                                            type="checkbox"
-                                            className="mr-2 border-gray-300 rounded-md"
-                                            checked={selectedFilters.includes(option.value)}
-                                            onChange={() => handleFilterChange(option.value)}
+                        <div key={category.name} className="mb-4 border-t-2 pt-2"
+                            id="accordion-collapse" data-accordion="collapse">
+                            <h2 id="accordion-collapse-heading-1" className='mb-2'>
+                                <button
+                                    type="button"
+                                    className="flex items-center justify-between w-full font-medium rtl:text-right gap-3"
+                                    data-accordion-target="#accordion-collapse-body-1"
+                                    aria-expanded={isOpen}
+                                    aria-controls="accordion-collapse-body-1"
+                                    onClick={toggleAccordion}
+                                >
+                                    <span>{category.name}</span>
+                                    <svg
+                                        data-accordion-icon
+                                        className={`w-3 h-3 shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                    >
+                                        <path
+                                            stroke="currentColor"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M9 5 5 1 1 5"
                                         />
-                                        <label className="text-gray-800">{option.label}</label>
-                                    </li>
-                                ))}
-                            </ul>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div
+                                id="accordion-collapse-body-1"
+                                className={`${isOpen ? '' : 'hidden'}`}
+                                aria-labelledby="accordion-collapse-heading-1"
+                            >
+                                <ul className="space-y-2">
+                                    {category.options.map((option) => (
+                                        <li key={option.value}>
+                                            <input
+                                                type="checkbox"
+                                                className="mr-2 border-gray-300 rounded-md"
+                                                checked={selectedFilters.includes(option.value)}
+                                                onChange={() => handleFilterChange(option.value)}
+                                            />
+                                            <label className="text-gray-800">{option.label}</label>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     ))}
                 </div>
 
                 {/* Feature Filters */}
                 <div className="feature-filters">
-                    <h3 className="text-lg font-semibold border-t-2 mb-2">Features</h3>
-                    <ul className="space-y-2">
-                        <li>
-                            <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                            <label className="text-gray-800">Metallic</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                            <label className="text-gray-800">Plastic cover</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                            <label className="text-gray-800">8GB Ram</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                            <label className="text-gray-800">Super power</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
-                            <label className="text-gray-800">Large Memory</label>
-                        </li>
-                    </ul>
+                    <div className="mb-4 border-t-2 pt-2"
+                        id="accordion-collapse" data-accordion="collapse">
+                        <h2 id="accordion-collapse-heading-1" className='mb-2'>
+                            <button
+                                type="button"
+                                className="flex items-center justify-between w-full font-medium rtl:text-right gap-3"
+                                data-accordion-target="#accordion-collapse-body-1"
+                                aria-expanded={isOpen}
+                                aria-controls="accordion-collapse-body-1"
+                                onClick={toggleAccordion}
+                            >
+                                <span>Features</span>
+                                <svg
+                                    data-accordion-icon
+                                    className={`w-3 h-3 shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 10 6"
+                                >
+                                    <path
+                                        stroke="currentColor"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                            id="accordion-collapse-body-1"
+                            className={`${isOpen ? '' : 'hidden'}`}
+                            aria-labelledby="accordion-collapse-heading-1"
+                        >
+                            <ul className="space-y-2">
+                                <li>
+                                    <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
+                                    <label className="text-gray-800">Metallic</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
+                                    <label className="text-gray-800">Plastic cover</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
+                                    <label className="text-gray-800">8GB Ram</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
+                                    <label className="text-gray-800">Super power</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" className="mr-2 border-gray-300 rounded-md" />
+                                    <label className="text-gray-800">Large Memory</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Price Range Filter */}
                 <div className="price-range-filter mt-5">
-                    <h3 className="text-lg border-t-2 font-semibold mb-2">Price range</h3>
-                    <input type="range" className="w-1/2" min="0" max="999999" />
-                    <div className="flex gap-8">
-                        <label className="text-gray-600">Min</label>
-                        <label className="text-gray-600">Max</label>
+                    (
+                    <div className="w-full max-w-xs mx-auto">
+                        {/* Accordion toggle button */}
+                        <button
+                            onClick={toggleAccordion}
+                            className="w-full text-left text-lg font-medium py-2 border-b"
+                        >
+                            Price range
+                        </button>
+
+                        {/* Accordion content */}
+                        {isOpen && (
+                            <div className="mt-2 p-4 border rounded-lg shadow-md bg-white">
+                                {/* Range Slider */}
+                                <ReactSlider
+                                    className="horizontal-slider"
+                                    thumbClassName="example-thumb"
+                                    trackClassName="example-track"
+                                    min={0}
+                                    max={999999}
+                                    value={range}
+                                    onChange={handleRangeChange}
+                                    ariaLabel={['Lower thumb', 'Upper thumb']}
+                                    ariaValuetext={({ valueNow, index }) =>
+                                        `Thumb value ${index === 0 ? 'min' : 'max'}: ${valueNow}`
+                                    }
+                                    renderThumb={({ key, ...props }, state) => (
+                                        <div key={key} {...props}>
+                                            {state.valueNow}
+                                        </div>
+                                    )}
+                                />
+
+                                {/* Min and Max input fields */}
+                                <div className="flex justify-between mt-4">
+                                    <div>
+                                        <label htmlFor="min" className="block text-sm font-medium text-gray-700">
+                                            Min
+                                        </label>
+                                        <input
+                                            id="min"
+                                            type="number"
+                                            min={0}
+                                            max={999999}
+                                            value={range[0]}
+                                            onChange={handleMinChange}
+                                            className="border border-gray-300 rounded-md px-2 py-1 w-full"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="max" className="block text-sm font-medium text-gray-700">
+                                            Max
+                                        </label>
+                                        <input
+                                            id="max"
+                                            type="number"
+                                            min={0}
+                                            max={999999}
+                                            value={range[1]}
+                                            onChange={handleMaxChange}
+                                            className="border border-gray-300 rounded-md px-2 py-1 w-full"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Apply button */}
+                                <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md w-full">
+                                    Apply
+                                </button>
+                            </div>
+                        )}
                     </div>
-                    <button className="bg-blue-500 text-white mt-2 px-4 py-2 rounded-md hover:bg-blue-600">Apply</button>
                 </div>
 
                 {/* Condition Filter */}
