@@ -13,17 +13,17 @@ import SuppliersByRegion from "@/components/Suppliers/Suppliers";
 export default function Home() {
   return (
     <div>
-      <Navbar></Navbar>
-      <Banner></Banner>
-      <DealsSection></DealsSection>
-      <HomeAndOutdoor></HomeAndOutdoor>
-      <ConsumerElectronics></ConsumerElectronics>
-      <QuoteForm></QuoteForm>
-      <RecommendedItems></RecommendedItems>
-      <ExtraServices></ExtraServices>
-      <SuppliersByRegion></SuppliersByRegion>
-      <Subscribe></Subscribe>
-      <Footer></Footer>
+      <Navbar />
+      <Banner />
+      <DealsSection />
+      <HomeAndOutdoor />
+      <ConsumerElectronics />
+      <QuoteForm />
+      <RecommendedItems />
+      <ExtraServices />
+      <SuppliersByRegion />
+      <Subscribe />
+      <Footer />
     </div>
   );
 }
