@@ -27,23 +27,29 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
     setIsOpen(!isOpen);
   };
 
-  const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    if (name === "min") {
-      setMinValue(Math.min(Number(value), maxValue - 1));
-    } else {
-      setMaxValue(Math.max(Number(value), minValue + 1));
-    }
+  const handleMinChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = Math.min(Number(event.target.value), maxValue - 1);
+    setMinValue(value);
+  };
+
+  const handleMaxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = Math.max(Number(event.target.value), minValue + 1);
+    setMaxValue(value);
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    if (name === "min") {
-      setMinValue(Number(value));
+    const numericValue = Number(value);
+
+    if (name === 'min') {
+      const newMinValue = Math.min(numericValue, maxValue - 1);
+      setMinValue(newMinValue);
     } else {
-      setMaxValue(Number(value));
+      const newMaxValue = Math.max(numericValue, minValue + 1);
+      setMaxValue(newMaxValue);
     }
   };
+
 
   const handleFilterChange = (value: string) => {
     const updatedFilters = selectedFilters.includes(value)
@@ -86,9 +92,8 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white p-4 z-40 transform ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out md:translate-x-0 md:static sidebar overflow-y-auto`} // Added overflow-y-auto for scrolling
+        className={`fixed top-0 left-0 h-full w-64 bg-white p-4 z-40 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 ease-in-out md:translate-x-0 md:static sidebar overflow-y-auto`} // Added overflow-y-auto for scrolling
       >
         <h2 className="text-xl font-bold mb-4">Filters</h2>
 
@@ -275,24 +280,63 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
             >
               <div className="w-full p-4 bg-gray-100 rounded-lg shadow-sm">
                 <div className="mb-4">
-                  <input
-                    type="range"
-                    name="min"
-                    min="0"
-                    max="999999"
-                    value={minValue}
-                    onChange={handleSliderChange}
-                    className="w-full"
-                  />
-                  <input
-                    type="range"
-                    name="max"
-                    min="0"
-                    max="999999"
-                    value={maxValue}
-                    onChange={handleSliderChange}
-                    className="w-full -mt-4"
-                  />
+                  <label className="block font-semibold text-gray-700">Price range</label>
+                  <div className="relative w-full h-8">
+                    {/* Background light blue part (before min value) */}
+                    <div
+                      className="absolute top-1/2 transform -translate-y-1/2 h-1 bg-blue-200"
+                      style={{
+                        left: 0,
+                        right: `${100 - (minValue / 999999) * 100}%`,
+                      }}
+                    ></div>
+
+                    {/* Selected blue part for range */}
+                    <div
+                      className="absolute top-1/2 transform -translate-y-1/2 h-1 bg-blue-500"
+                      style={{
+                        left: `${(minValue / 999999) * 100}%`,
+                        right: `${100 - (maxValue / 999999) * 100}%`,
+                      }}
+                    ></div>
+
+                    {/* Background light blue part (after max value) */}
+                    <div
+                      className="absolute top-1/2 transform -translate-y-1/2 h-1 bg-blue-200"
+                      style={{
+                        left: `${(maxValue / 999999) * 100}%`,
+                        right: 0,
+                      }}
+                    ></div>
+
+                    {/* Min thumb */}
+                    <input
+                      type="range"
+                      min="0"
+                      max="999999"
+                      value={minValue}
+                      onChange={handleMinChange}
+                      className="absolute w-full h-1 appearance-none bg-transparent"
+                      style={{
+                        zIndex: 3,
+                        pointerEvents: 'auto',
+                      }}
+                    />
+
+                    {/* Max thumb */}
+                    <input
+                      type="range"
+                      min="0"
+                      max="999999"
+                      value={maxValue}
+                      onChange={handleMaxChange}
+                      className="absolute w-full h-1 appearance-none bg-transparent"
+                      style={{
+                        zIndex: 2,
+                        pointerEvents: 'auto',
+                      }}
+                    />
+                  </div>
                 </div>
 
                 <div className="flex justify-between items-center">
