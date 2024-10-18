@@ -24,9 +24,9 @@ const ExtraServices: React.FC = () => {
           <div key={service.id} className="relative border rounded-lg overflow-hidden">
             <Image width={1000} height={1000} src={service.image} alt={service.title} className="w-full h-32 object-cover" />
             <div className="p-4">
-              <h3 className="text-lg w-2/3 font-medium">{service.title}</h3>
+              <h3 className="text-lg md:w-2/3 w-full font-medium">{service.title}</h3>
             </div>
-            <div className="absolute lg:bottom-16 md:bottom-20 md:right-4 lg:right-4 bg-blue-100 text-blue-600 rounded-full p-3">
+            <div className="absolute bottom-10 right-0 lg:bottom-16 md:bottom-20 md:right-4 lg:right-4 bg-blue-100 text-blue-600 rounded-full p-3">
               {service.icon}
             </div>
           </div>
