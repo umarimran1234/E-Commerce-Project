@@ -26,7 +26,7 @@ const ExtraServices: React.FC = () => {
             <div className="p-4">
               <h3 className="text-lg w-2/3 font-medium">{service.title}</h3>
             </div>
-            <div className="absolute bottom-16 right-4 bg-blue-100 text-blue-600 rounded-full p-3">
+            <div className="absolute lg:bottom-16 md:bottom-20 md:right-4 lg:right-4 bg-blue-100 text-blue-600 rounded-full p-3">
               {service.icon}
             </div>
           </div>
