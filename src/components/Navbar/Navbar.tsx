@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
             <input
               type="text"
               placeholder="Search"
-              className="border-2 border-[#0D6EFD] rounded-lg py-2 pl-4 pr-10 w-[18rem] md:w-[50rem] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border-2 border-[#0D6EFD] rounded-lg py-2 pl-4 pr-10 w-[18rem] md:w-[30rem] lg:w-[50rem] focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <select className="absolute right-16 border-l-2 border-[#0D6EFD] top-1/2 transform -translate-y-1/2 text-[#1C1C1C] p-2 text-gray-500">
               <option value="all">All category</option>
