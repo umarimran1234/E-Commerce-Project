@@ -107,9 +107,8 @@ const Banner: React.FC = () => {
             {tabs.map((tab) => (
               <li
                 key={tab}
-                className={`cursor-pointer p-2 ${
-                  activeTab === tab ? "bg-blue-200 text-[#1C1C1C] font-medium rounded-lg" : "text-gray-600"
-                }`}
+                className={`cursor-pointer p-2 ${activeTab === tab ? "bg-blue-200 text-[#1C1C1C] font-medium rounded-lg" : "text-gray-600"
+                  }`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}
@@ -131,7 +130,7 @@ const Banner: React.FC = () => {
         {/* User/Promotion Panel */}
         <aside className="w-full md:w-1/5 p-4 flex flex-col gap-4">
           <div className="bg-[#E3F0FF] p-4 rounded-lg">
-            <h3 className="flex items-center gap-2">
+            <h3 className="flex lg:flex-row flex-col items-center gap-2">
               <Image
                 alt="User Image"
                 height={44}
