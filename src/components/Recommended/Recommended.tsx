@@ -23,11 +23,11 @@ const recommendedItems: Item[] = [
 
 const RecommendedItems: React.FC = () => {
   return (
-    <section className="container mx-auto p-6">
+    <section className="container mx-auto md:p-6 p-2">
       <h2 className="text-2xl font-semibold mb-4">Recommended items</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {recommendedItems.map((item) => (
-          <div key={item.id} className="border rounded-lg p-4 bg-white hover:shadow-lg">
+          <div key={item.id} className="border rounded-lg md:p-4 p-2 bg-white hover:shadow-lg">
             <img src={item.image} alt={item.name} className="w-full h-52 object-cover mb-2" />
             <h3 className="text-lg font-medium">{item.price}</h3>
             <p className="text-sm text-[#8B96A5]">{item.description}</p>
