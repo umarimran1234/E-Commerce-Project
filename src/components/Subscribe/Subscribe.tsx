@@ -18,7 +18,7 @@ const Subscribe = () => {
                                 <label htmlFor="email-address" className="sr-only">
                                     Email address
                                 </label>
-                                <MdOutlineEmail className="text-2xl absolute md:bottom-[6.5rem] lg:bottom-10 pl-2 z-50" />
+                                <MdOutlineEmail className="text-2xl absolute bottom-[8rem] md:bottom-[6.5rem] lg:bottom-10 pl-2 z-50" />
                                 <input
                                     id="email-address"
                                     name="email"
