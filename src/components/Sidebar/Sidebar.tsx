@@ -20,8 +20,8 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isOpen, setIsOpen] = useState<boolean>(true);
-  const [minValue, setMinValue] = useState(0);
-  const [maxValue, setMaxValue] = useState(999999);
+  const [minValue, setMinValue] = useState(200000);
+  const [maxValue, setMaxValue] = useState(500000);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -279,8 +279,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
               aria-labelledby="accordion-collapse-heading-1"
             >
               <div className="w-full p-4 bg-gray-100 rounded-lg shadow-sm">
-                <div className="mb-4">
-                  <label className="block font-semibold text-gray-700">Price range</label>
+                <div className="">
                   <div className="relative w-full h-8">
                     {/* Background light blue part (before min value) */}
                     <div
@@ -378,25 +377,66 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
 
         {/* Condition Filter */}
         <div className="condition-filter mt-5">
-          <h3 className="text-lg border-t-2 font-semibold mb-2">Condition</h3>
-          <ul className="space-y-2">
-            <li>
-              <input type="radio" name="condition" className="mr-2" />
-              <label className="text-gray-800">Any</label>
-            </li>
-            <li>
-              <input type="radio" name="condition" className="mr-2" />
-              <label className="text-gray-800">Refurbished</label>
-            </li>
-            <li>
-              <input type="radio" name="condition" className="mr-2" />
-              <label className="text-gray-800">Brand new</label>
-            </li>
-            <li>
-              <input type="radio" name="condition" className="mr-2" />
-              <label className="text-gray-800">Old items</label>
-            </li>
-          </ul>
+          <div
+            className="mb-4 border-t-2 pt-2"
+            id="accordion-collapse"
+            data-accordion="collapse"
+          >
+            <h2 id="accordion-collapse-heading-1" className="mb-2">
+              <button
+                type="button"
+                className="flex items-center justify-between w-full font-medium rtl:text-right gap-3"
+                data-accordion-target="#accordion-collapse-body-1"
+                aria-expanded={isOpen}
+                aria-controls="accordion-collapse-body-1"
+                onClick={toggleAccordion}
+              >
+                <span>Condition</span>
+                <svg
+                  data-accordion-icon
+                  className={`w-3 h-3 shrink-0 ${isOpen ? "rotate-180" : ""}`}
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 5 5 1 1 5"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-collapse-body-1"
+              className={`${isOpen ? "" : "hidden"}`}
+              aria-labelledby="accordion-collapse-heading-1"
+            >
+              <div className="w-full p-4 bg-gray-100 rounded-lg shadow-sm">
+                <ul className="space-y-2">
+                  <li>
+                    <input type="radio" name="condition" className="mr-2" />
+                    <label className="text-gray-800">Any</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="condition" className="mr-2" />
+                    <label className="text-gray-800">Refurbished</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="condition" className="mr-2" />
+                    <label className="text-gray-800">Brand new</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="condition" className="mr-2" />
+                    <label className="text-gray-800">Old items</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Ratings Filter */}
