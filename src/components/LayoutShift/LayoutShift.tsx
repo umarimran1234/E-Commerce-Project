@@ -73,25 +73,26 @@ function LayoutShift() {
                             <div className={`flex ${!isGrid ? "md:flex-row flex-col" : "flex-col"}`}>
                                 <Image width={1000} height={1000} src={product?.image} alt={product?.name} className={`${!isGrid ? "w-fit mx-auto md:mx-0 h-48 object-cover" : ""}`} />
                                 <div className="p-4">
-                                    <h2 className="text-lg font-bold">{product?.name}</h2>
-                                    <div className="flex md:flex-row flex-col justify-between">
+                                    {!isGrid ? <div><h2 className="text-lg font-bold">{product?.name}</h2></div> : ""}
+                                    <div className="flex md:flex-row gap-2 flex-col justify-between">
                                         <div>
                                             <p className="text-2xl mt-2 font-semibold">${product?.price.toFixed(2)}</p>
-                                            <p className="text-gray-400">
-                                                <span className="text-yellow-500">★★★★★</span> {product?.rating}
+                                            <p className="text-[#FF9017] flex gap-2">
+                                                <span>★★★★★</span> {product?.rating}
                                             </p>
                                         </div>
-                                        <div className='flex gap-2 pt-10'>
+                                        {!isGrid ? <div className={`flex gap-2 pt-10`}>
                                             <p className="text-gray-400">Orders: {product?.orders}</p>
                                             <p className='text-[#00B517]'>Free Shipping</p>
-                                        </div>
+                                        </div> : ""}
                                     </div>
-                                    <div className='mt-2'>
+                                    {!isGrid ? <div className='mt-2'>
                                         <p className="text-gray-500">{product?.description}</p>
                                         <button className="font-medium text-[#0D6EFD]">
                                             View Details
                                         </button>
-                                    </div>
+                                    </div> : ""}
+                                    {isGrid ? <h2 className="text-lg text-[#606060]">{product?.name}</h2> : ""}
                                 </div>
                             </div>
                         </div>
