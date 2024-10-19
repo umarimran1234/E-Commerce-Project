@@ -92,11 +92,9 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white p-4 z-40 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 h-full w-64 p-4 z-40 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out md:translate-x-0 md:static sidebar overflow-y-auto`} // Added overflow-y-auto for scrolling
       >
-        <h2 className="text-xl font-bold mb-4">Filters</h2>
-
         {/* Category Filters */}
         <div className="category-filters">
           {data.map((category) => (
@@ -278,8 +276,8 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
               className={`${isOpen ? "" : "hidden"}`}
               aria-labelledby="accordion-collapse-heading-1"
             >
-              <div className="w-full p-4 bg-gray-100 rounded-lg shadow-sm">
-                <div className="">
+              <div className="w-full">
+                <div className="pt-2">
                   <div className="relative w-full h-8">
                     {/* Background light blue part (before min value) */}
                     <div
@@ -415,7 +413,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
               className={`${isOpen ? "" : "hidden"}`}
               aria-labelledby="accordion-collapse-heading-1"
             >
-              <div className="w-full p-4 bg-gray-100 rounded-lg shadow-sm">
+              <div className="w-full">
                 <ul className="space-y-2">
                   <li>
                     <input type="radio" name="condition" className="mr-2" />
