@@ -12,7 +12,7 @@ interface Product {
     ratings: number;
     reviews: number;
     sold: number;
-    priceTiers: { range: string; price: string }[];
+    priceTiers: { range: string; price: JSX.Element }[];
     type: string;
     material: string;
     design: string;
@@ -33,9 +33,9 @@ const ProductComponent: React.FC = () => {
         reviews: 32,
         sold: 154,
         priceTiers: [
-            { range: '50-100 pcs', price: '$98.00' },
-            { range: '100-700 pcs', price: '$90.00' },
-            { range: '700+ pcs', price: '$78.00' },
+            { range: '50-100 pcs', price: <p className='text-[#FA3434]'>$98.00</p> },
+            { range: '100-700 pcs', price: <p>$90.00</p> },
+            { range: '700+ pcs', price: <p>$78.00</p> },
         ],
         type: 'Classic shoes',
         material: 'Plastic material',
@@ -91,7 +91,7 @@ const ProductComponent: React.FC = () => {
                                 {product.priceTiers.map((tier, index) => (
                                     <div key={index} className="flex flex-col-reverse">
                                         <span>{tier.range}</span>
-                                        <span className="font-semibold text-red-500">{tier.price}</span>
+                                        <span className="font-semibold">{tier.price}</span>
                                     </div>
                                 ))}
                             </div>
@@ -131,9 +131,20 @@ const ProductComponent: React.FC = () => {
 
                     <div className='lg:w-1/2 md:w-full boder-gray-200 border-2 h-fit p-2 rounded-lg'>
                         <div className="flex flex-col">
-                            <div className="font-semibold">Supplier</div>
-                            <span className='pb-2 border-b-2 border-gray-200'>{product.supplier.name}</span>
-                            <span className='mt-2 text-gray-500'>{product.supplier.location}</span>
+                            <div className='flex gap-2 boder-gray-200 border-b-2 pb-2'>
+                                <p className='h-12 w-12 flex items-center justify-center bg-[#C6F3F1] text-[28px] text-[#4CA7A799] rounded-lg font-medium'>R</p>
+                                <div>
+                                    <div className="font-semibold">Supplier</div>
+                                    <span>{product.supplier.name}</span>
+                                </div>
+                            </div>
+                            <span className='mt-2 flex items-center gap-2 text-gray-500'> <Image
+                                src="/images/Flag.jpg"
+                                alt="Flag"
+                                className="h-[15px]"
+                                height={10}
+                                width={20}
+                            ></Image>{product.supplier.location}</span>
                             <span className='mt-2 text-gray-500 flex items-center gap-2'><MdOutlineVerifiedUser /> Verified Seller</span>
                             <span className='mt-2 text-gray-500 flex items-center gap-2'><TbWorld /> Worldwide Shipping</span>
                         </div>
