@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoGridSharp, IoReorderThreeOutline } from "react-icons/io5";
+import FilterComponent from "../FilterComponent/FilterComponent";
 const products = [
   {
     name: "Canon Cmera EOS 2000, Black 10x zoom",
@@ -69,21 +70,19 @@ function LayoutShift() {
               </select>
               <button
                 onClick={() => handleGrid()}
-                className={`${
-                  isGrid
+                className={`${isGrid
                     ? "p-1 md:text-xl bg-gray-300 rounded-lg border-2"
                     : "p-1 md:text-xl rounded-lg border-2"
-                }`}
+                  }`}
               >
                 <IoGridSharp />
               </button>
               <button
                 onClick={() => handleNormal()}
-                className={`${
-                  !isGrid
+                className={`${!isGrid
                     ? "p-1 md:text-xl bg-gray-300 rounded-lg border-2"
                     : "p-1 md:text-xl rounded-lg border-2"
-                }`}
+                  }`}
               >
                 <IoReorderThreeOutline />
               </button>
@@ -91,13 +90,16 @@ function LayoutShift() {
           </div>
         </div>
       </div>
+      {/* Filter Component */}
+      <FilterComponent />
+
+      {/* Product data */}
       <div className="container mx-auto mt-10">
         <div
-          className={`grid ${
-            !isGrid
+          className={`grid ${!isGrid
               ? "gap-8 grid-cols-1"
               : "lg:grid-cols-3 md:grid-cols-2 gap-4"
-          }`}
+            }`}
         >
           {products.map((product, index) => (
             <div
@@ -105,18 +107,16 @@ function LayoutShift() {
               className="bg-white border-2 p-4 border-gray-300 rounded-lg shadow-md overflow-hidden"
             >
               <div
-                className={`flex ${
-                  !isGrid ? "md:flex-row flex-col" : "flex-col"
-                }`}
+                className={`flex ${!isGrid ? "md:flex-row flex-col" : "flex-col"
+                  }`}
               >
                 <Image
                   width={1000}
                   height={1000}
                   src={product?.image}
                   alt={product?.name}
-                  className={`${
-                    !isGrid ? "w-fit mx-auto md:mx-0 h-48 object-cover" : ""
-                  }`}
+                  className={`${!isGrid ? "w-fit mx-auto md:mx-0 h-48 object-cover" : ""
+                    }`}
                 />
                 <div className="p-4">
                   {!isGrid ? (
@@ -130,9 +130,8 @@ function LayoutShift() {
                   <div className="flex md:flex-row gap-2 flex-col justify-between">
                     <div>
                       <p
-                        className={`text-2xl mt-2 font-semibold ${
-                          isGrid ? "flex justify-between w-[15rem]" : ""
-                        }`}
+                        className={`text-2xl mt-2 font-semibold ${isGrid ? "flex justify-between w-[15rem]" : ""
+                          }`}
                       >
                         ${product?.price.toFixed(2)}
                         {isGrid ? (
