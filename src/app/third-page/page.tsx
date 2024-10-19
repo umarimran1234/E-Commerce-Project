@@ -4,16 +4,18 @@ import ProductTabs from "./ProductTabs";
 import RelatedProducts from "./RelatedProducts";
 import SuperDiscount from "./SuperDiscount";
 import Footer from "@/components/Footer/Footer";
+import Breadcrumb from "./Breadcrumb";
 
 function ThirdPage() {
     return (
         <>
-            <Navbar></Navbar>
-            <ProductComponent></ProductComponent>
-            <ProductTabs></ProductTabs>
-            <RelatedProducts></RelatedProducts>
-            <SuperDiscount></SuperDiscount>
-            <Footer></Footer>
+            <Navbar />
+            <Breadcrumb />
+            <ProductComponent />
+            <ProductTabs />
+            <RelatedProducts />
+            <SuperDiscount />
+            <Footer />
         </>
     )
 }

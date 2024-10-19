@@ -55,7 +55,7 @@ const ProductComponent: React.FC = () => {
     };
 
     return (
-        <div className="container mx-auto mt-10">
+        <div className="container mx-auto mt-5">
             <div className="grid border-gray-200 p-4 border-2 rounded-lg grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Left section: Image */}
                 <div className="space-y-4">
