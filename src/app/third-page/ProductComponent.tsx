@@ -81,7 +81,7 @@ const ProductComponent: React.FC = () => {
                         <p className='text-green-500 flex items-center'><TiTick />{product.stock}</p>
                         <h1 className="text-xl font-semibold">{product.name}</h1>
                         <div className="flex items-center space-x-2">
-                            <span className="text-yellow-500 text-lg">★★★★★ {product.ratings}</span>
+                            <span className="text-[#FF9017] text-lg">★★★★★ {product.ratings}</span>
                             <span className="text-gray-600 flex items-center gap-1"><MdOutlineMessage /> {product.reviews} reviews</span>
                             <span className="text-gray-600 flex items-center"><RiSailboatFill /> {product.sold} sold</span>
                         </div>
