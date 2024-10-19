@@ -84,7 +84,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
       {/* Hamburger Menu */}
       <div className="md:hidden inline" title="Filter">
         {!isSidebarOpen && ( // Only show the hamburger button when the sidebar is closed
-          <button className="text-3xl" onClick={() => setIsSidebarOpen(true)}>
+          <button className="text-3xl -mt-10" onClick={() => setIsSidebarOpen(true)}>
             &#9776; {/* Hamburger Icon */}
           </button>
         )}
@@ -92,7 +92,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 p-4 z-40 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 md:bg-gray-100 bg-white left-0 h-full w-64 p-4 z-40 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out md:translate-x-0 md:static sidebar overflow-y-auto`} // Added overflow-y-auto for scrolling
       >
         {/* Category Filters */}
