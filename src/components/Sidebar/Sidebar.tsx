@@ -439,44 +439,85 @@ const Sidebar: React.FC<SidebarProps> = ({ data, onFilterChange }) => {
 
         {/* Ratings Filter */}
         <div className="ratings-filter mt-5">
-          <h3 className="text-lg border-t-2 font-semibold mb-2">Ratings</h3>
-          <ul className="space-y-2">
-            <li>
-              <input
-                type="checkbox"
-                className="mr-2 border-gray-300 rounded-md"
-              />
-              <label className="text-gray-800 text-orange-500">★★★★★</label>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                className="mr-2 border-gray-300 rounded-md"
-              />
-              <label className="text-gray-800 text-orange-500">★★★★</label>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                className="mr-2 border-gray-300 rounded-md"
-              />
-              <label className="text-gray-800 text-orange-500">★★★</label>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                className="mr-2 border-gray-300 rounded-md"
-              />
-              <label className="text-gray-800 text-orange-500">★★</label>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                className="mr-2 border-gray-300 rounded-md"
-              />
-              <label className="text-gray-800 text-orange-500">★</label>
-            </li>
-          </ul>
+          <div
+            className="mb-4 border-t-2 pt-2"
+            id="accordion-collapse"
+            data-accordion="collapse"
+          >
+            <h2 id="accordion-collapse-heading-1" className="mb-2">
+              <button
+                type="button"
+                className="flex items-center justify-between w-full font-medium rtl:text-right gap-3"
+                data-accordion-target="#accordion-collapse-body-1"
+                aria-expanded={isOpen}
+                aria-controls="accordion-collapse-body-1"
+                onClick={toggleAccordion}
+              >
+                <span>Ratings</span>
+                <svg
+                  data-accordion-icon
+                  className={`w-3 h-3 shrink-0 ${isOpen ? "rotate-180" : ""}`}
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 5 5 1 1 5"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-collapse-body-1"
+              className={`${isOpen ? "" : "hidden"}`}
+              aria-labelledby="accordion-collapse-heading-1"
+            >
+              <div className="w-full">
+                <ul className="space-y-2">
+                  <li>
+                    <input
+                      type="checkbox"
+                      className="mr-2 border-gray-300 rounded-md"
+                    />
+                    <label className="text-gray-800 text-orange-500">★★★★★</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      className="mr-2 border-gray-300 rounded-md"
+                    />
+                    <label className="text-gray-800 text-orange-500">★★★★</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      className="mr-2 border-gray-300 rounded-md"
+                    />
+                    <label className="text-gray-800 text-orange-500">★★★</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      className="mr-2 border-gray-300 rounded-md"
+                    />
+                    <label className="text-gray-800 text-orange-500">★★</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      className="mr-2 border-gray-300 rounded-md"
+                    />
+                    <label className="text-gray-800 text-orange-500">★</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
