@@ -2,8 +2,8 @@ import React from 'react';
 
 const Navigation: React.FC = () => {
     return (
-        <nav className='mt-10 flex flex-row-reverse gap-4'>
-            <ul className="flex justify-end -space-x-px h-8 text-sm">
+        <nav className='mt-10 flex flex-col-reverse md:flex-row-reverse gap-4'>
+            <ul className="flex justify-end h-8 text-sm">
                 <li>
                     <a
                         href="#"
@@ -65,7 +65,7 @@ const Navigation: React.FC = () => {
                 </li>
             </ul>
             <select className="border-2 rounded px-2">
-                <option value="">Show 10</option>
+                <option value="" className='text-center'>Show 10</option>
                 {/* Add more options as needed */}
             </select>
         </nav>
