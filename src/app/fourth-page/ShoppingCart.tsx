@@ -73,7 +73,7 @@ const ShoppingCart = () => {
                             <Image
                                 src={item.image}
                                 alt={item.name}
-                                className="w-24 h-24 object-cover rounded-md mr-4"
+                                className="w-24 h-24 border p-2 bg-gray-200 object-cover rounded-md mr-4"
                                 width={1000}
                                 height={1000}
                             />
