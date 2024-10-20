@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image';
 import { useState } from 'react';
+import { FaRegHeart } from 'react-icons/fa';
 import { MdOutlineMessage, MdOutlineVerifiedUser } from 'react-icons/md';
 import { RiSailboatFill } from 'react-icons/ri';
 import { TbWorld } from 'react-icons/tb';
@@ -56,7 +57,7 @@ const ProductComponent: React.FC = () => {
 
     return (
         <div className="container mx-auto mt-5">
-            <div className="grid border-gray-200 p-4 border-2 rounded-lg grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid bg-white border-gray-200 p-4 border-2 rounded-lg grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Left section: Image */}
                 <div className="space-y-4">
                     <Image width={380} height={380} src={product.images[selectedImage]} alt="Product" className="object-cover mx-auto border-2 border-gray-200 p-2 rounded-lg" />
@@ -129,29 +130,32 @@ const ProductComponent: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className='lg:w-1/2 md:w-full boder-gray-200 border-2 h-fit p-2 rounded-lg'>
-                        <div className="flex flex-col">
-                            <div className='flex gap-2 boder-gray-200 border-b-2 pb-2'>
-                                <p className='h-12 w-12 flex items-center justify-center bg-[#C6F3F1] text-[28px] text-[#4CA7A799] rounded-lg font-medium'>R</p>
-                                <div>
-                                    <div className="font-semibold">Supplier</div>
-                                    <span>{product.supplier.name}</span>
+                    <div className='lg:w-1/2 md:w-full'>
+                        <div className='boder-gray-200 border-2 h-fit p-2 rounded-lg'>
+                            <div className="flex flex-col">
+                                <div className='flex gap-2 boder-gray-200 border-b-2 pb-2'>
+                                    <p className='h-12 w-12 flex items-center justify-center bg-[#C6F3F1] text-[28px] text-[#4CA7A799] rounded-lg font-medium'>R</p>
+                                    <div>
+                                        <div className="font-semibold">Supplier</div>
+                                        <span>{product.supplier.name}</span>
+                                    </div>
                                 </div>
+                                <span className='mt-2 flex items-center gap-2 text-gray-500'> <Image
+                                    src="/images/Flag.jpg"
+                                    alt="Flag"
+                                    className="h-[15px]"
+                                    height={10}
+                                    width={20}
+                                ></Image>{product.supplier.location}</span>
+                                <span className='mt-2 text-gray-500 flex items-center gap-2'><MdOutlineVerifiedUser /> Verified Seller</span>
+                                <span className='mt-2 text-gray-500 flex items-center gap-2'><TbWorld /> Worldwide Shipping</span>
                             </div>
-                            <span className='mt-2 flex items-center gap-2 text-gray-500'> <Image
-                                src="/images/Flag.jpg"
-                                alt="Flag"
-                                className="h-[15px]"
-                                height={10}
-                                width={20}
-                            ></Image>{product.supplier.location}</span>
-                            <span className='mt-2 text-gray-500 flex items-center gap-2'><MdOutlineVerifiedUser /> Verified Seller</span>
-                            <span className='mt-2 text-gray-500 flex items-center gap-2'><TbWorld /> Worldwide Shipping</span>
+                            <div className="flex flex-col gap-2 mt-4">
+                                <button className="bg-blue-500 text-white px-4 py-1 font-semibold rounded">Send inquiry</button>
+                                <button className="border-2 border-gray-200 text-[#0D6EFD] font-medium px-4 py-1 rounded">{"Seller's profile"}</button>
+                            </div>
                         </div>
-                        <div className="flex flex-col gap-2 mt-4">
-                            <button className="bg-blue-500 text-white px-4 py-1 font-semibold rounded">Send inquiry</button>
-                            <button className="border-2 border-gray-200 text-[#0D6EFD] font-medium px-4 py-1 rounded">{"Seller's profile"}</button>
-                        </div>
+                        <p className='flex gap-2 justify-center mt-10 text-[#0D6EFD] items-center font-medium'><FaRegHeart />Save for later</p>
                     </div>
                 </div>
             </div>
