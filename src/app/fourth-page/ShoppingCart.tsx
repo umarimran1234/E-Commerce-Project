@@ -66,7 +66,7 @@ const ShoppingCart = () => {
         <div className="container mx-auto mt-10">
             {/* Cart Items */}
             <div className="flex flex-col lg:flex-row">
-                <div className="w-full lg:w-2/3 bg-white border-2 p-4 rounded-lg shadow-md">
+                <div className="w-full bg-white border-2 p-4 rounded-lg shadow-md">
                     <h2 className="text-2xl font-semibold mb-4">My cart ({cartItems.length})</h2>
                     {cartItems.map((item) => (
                         <div key={item.id} className="flex items-center border-b py-4">
@@ -147,11 +147,11 @@ const ShoppingCart = () => {
                     </div>
                     <div className="flex justify-between py-2 border-b">
                         <span className='text-gray-600'>Discount:</span>
-                        <span className="text-red-500">-${discount.toFixed(2)}</span>
+                        <span className="text-[#FA3434]">-${discount.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between py-2 border-b">
                         <span className='text-gray-600'>Tax:</span>
-                        <span className="text-green-500">+${tax.toFixed(2)}</span>
+                        <span className="text-[#00B517]">+${tax.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between py-4 font-semibold text-lg">
                         <span>Total:</span>
@@ -159,10 +159,10 @@ const ShoppingCart = () => {
                     </div>
                     <button className="bg-[#00B517] text-white w-full py-5 text-[18px] font-medium rounded-md">Checkout</button>
                     <div className="flex items-center justify-center gap-4 mt-4">
-                        <SiAmericanexpress className='text-2xl' />
-                        <RiMastercardFill className='text-2xl' />
-                        <FaPaypal className='text-2xl' />
-                        <RiVisaLine className='text-2xl' />
+                        <Image src="/images/AmericanExpress.jpg" alt='American Express' width={34} height={22}></Image>
+                        <Image src="/images/Mastercard.jpg" alt='American Express' width={34} height={22}></Image>
+                        <Image src="/images/Paypal.jpg" alt='American Express' width={34} height={22}></Image>
+                        <Image src="/images/Visa.jpg" alt='American Express' width={34} height={22}></Image>
                         <FaApplePay className='text-3xl' />
                     </div>
                 </div>
