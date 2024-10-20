@@ -19,7 +19,7 @@ const relatedProducts: Product[] = [
 const RelatedProducts: React.FC = () => {
     return (
         <div className='container mt-5 mx-auto'>
-            <div className="p-4 border-2 rounded-lg">
+            <div className="p-4 bg-white border-2 rounded-lg">
                 <h2 className="text-lg font-semibold mb-4">Related products</h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
                     {relatedProducts.map((product) => (
@@ -32,7 +32,7 @@ const RelatedProducts: React.FC = () => {
                                 height={1000}
                                 src={product.imageUrl}
                                 alt={product.name}
-                                className="w-full p-2 h-32 border-gray-100 border mx-auto rounded-lg object-contain mb-2"
+                                className="w-full p-2 h-32 bg-[#EEEEEE] border-gray-100 border mx-auto rounded-lg object-contain mb-2"
                             />
                             <h3 className="text-sm font-medium">{product.name}</h3>
                             <p className="text-gray-500 text-sm">{product.priceRange}</p>
