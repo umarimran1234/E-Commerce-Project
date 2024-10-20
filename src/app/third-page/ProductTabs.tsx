@@ -22,7 +22,7 @@ const ProductTabs = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                         </p>
                         <table className="table-auto w-full mb-4">
-                            <tbody>
+                            <tbody className=''>
                                 <tr className='text-gray-600'>
                                     <td className="border border-gray-300 bg-gray-200 px-4 py-2">Model</td>
                                     <td className="border px-4 py-2">#8786867</td>
@@ -84,11 +84,11 @@ const ProductTabs = () => {
 
     return (
         <div className="mx-auto flex lg:flex-row flex-col lg:gap-8 container mt-10">
-            <div className="border-2 rounded-lg py-2 px-4 lg:w-2/3 border-gray-200 mb-4">
-                <ul className="flex space-x-4">
+            <div className="border-2 bg-white rounded-lg py-2 px-4 lg:w-2/3 border-gray-200 mb-4">
+                <ul className="flex md:space-x-4 md:flex-row">
                     {tabs.map((tab) => (
                         <li key={tab.value} className={`${activeTab === tab.value ? 'border-b-2 border-blue-500 font-medium' : ''} cursor-pointer`}>
-                            <button onClick={() => setActiveTab(tab.value)} className="py-2 px-4 text-gray-600">
+                            <button onClick={() => setActiveTab(tab.value)} className="md:py-2 px-1 md:px-4 text-gray-600">
                                 {tab.label}
                             </button>
                         </li>
@@ -99,7 +99,7 @@ const ProductTabs = () => {
                 </div>
             </div>
             {/* You May Like Section */}
-            <div className="mt-8 border-2 border-gray-200 h-fit p-4 rounded-lg lg:w-1/3">
+            <div className="mt-8 border-2 border-gray-200 bg-white h-fit p-4 rounded-lg lg:w-1/3">
                 <h2 className="text-xl font-semibold mb-4">You may like</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
                     <div className="flex items-center space-x-4">
