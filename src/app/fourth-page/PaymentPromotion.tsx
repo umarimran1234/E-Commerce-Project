@@ -7,14 +7,14 @@ function PaymentPromotion() {
         <div className="container mx-auto mt-10">
             <div className="flex md:flex-row flex-col gap-8 items-center md:gap-16">
                 <div className="flex items-center gap-2">
-                    <RiLockFill className="rounded-full border-2 bg-gray-300 text-4xl p-1" />
+                    <RiLockFill className="rounded-full border-2 text-gray-500 bg-gray-300 text-4xl p-1" />
                     <div>
                         <p>Secure Payment</p>
                         <p className="text-gray-500">Have you ever finally just</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-2">
-                    <MdMessage className="rounded-full border-2 bg-gray-300 text-4xl p-1" />
+                    <MdMessage className="rounded-full border-2 text-gray-500 bg-gray-300 text-4xl p-1" />
                     <div>
                         <p>Customer support</p>
                         <p className="text-gray-500">Have you ever finally just </p>
