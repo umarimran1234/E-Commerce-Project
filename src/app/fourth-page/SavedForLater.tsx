@@ -43,20 +43,20 @@ const products: Product[] = [
 
 const SavedForLater: React.FC = () => {
     return (
-        <div className="container mx-auto mt-10">
+        <div className="container bg-white rounded-lg p-4 mx-auto mt-10">
             <h2 className="text-2xl font-semibold px-2 mb-4">Saved for later</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {products.map((product) => (
                     <div
                         key={product.id}
-                        className="border rounded-lg p-4 shadow-sm hover:shadow-lg transition-shadow duration-300"
+                        className="rounded-lg p-4 shadow-sm hover:shadow-lg transition-shadow duration-300"
                     >
                         <Image
                             src={product.image}
                             alt={product.name}
                             width="1000"
                             height={1000}
-                            className="w-full h-64 object-cover mb-4"
+                            className="w-full h-64 rounded-lg p-8 bg-[#EEEEEE] object-cover mb-4"
                         />
                         <h3 className="text-lg font-semibold">{product.price}</h3>
                         <p className="text-gray-500 mb-4">{product.description}</p>
