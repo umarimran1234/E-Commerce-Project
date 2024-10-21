@@ -1,9 +1,7 @@
 "use client"
 import Image from 'next/image';
 import { useState } from 'react';
-import { FaApplePay, FaArrowLeft, FaPaypal } from 'react-icons/fa';
-import { RiMastercardFill, RiVisaLine } from 'react-icons/ri';
-import { SiAmericanexpress } from 'react-icons/si';
+import { FaApplePay, FaArrowLeft } from 'react-icons/fa';
 
 interface CartItem {
     id: number;
