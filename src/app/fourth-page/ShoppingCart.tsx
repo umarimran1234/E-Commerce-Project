@@ -67,7 +67,7 @@ const ShoppingCart = () => {
                 <div className="w-full bg-white border-2 p-4 rounded-lg shadow-md">
                     <h2 className="text-2xl font-semibold mb-4">My cart ({cartItems.length})</h2>
                     {cartItems.map((item) => (
-                        <div key={item.id} className="flex items-center border-b py-4">
+                        <div key={item.id} className="flex md:flex-row flex-col items-center border-b py-4">
                             <Image
                                 src={item.image}
                                 alt={item.name}
@@ -83,7 +83,7 @@ const ShoppingCart = () => {
                                 <p className="text-gray-500">Seller: {item.seller}</p>
                                 <div className="flex mt-2 space-x-2">
                                     <button className="text-red-500 border-2 text-[13px] font-medium rounded-lg p-1">Remove</button>
-                                    <button className="text-blue-500 text-[13px] font-medium border-2 rounded-lg p-1">Save for later</button>
+                                    <button className="text-blue-500 border-2 text-[13px] font-medium rounded-lg p-1 w-max">Save for later</button>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-2">
