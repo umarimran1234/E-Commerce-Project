@@ -50,7 +50,8 @@ const QuoteForm: React.FC = () => {
     };
 
     return (
-        <div className="container mx-auto mt-[2rem]">
+        <>
+        <div className="container hidden lg:flex lg:flex-col mx-auto mt-[2rem]">
             <Image src="/images/Stock.png" alt='Stock Image' className='relative h-[42.5rem] md:h-[25.2rem] rounded-lg w-full' height={1000} width={1000}></Image>
             <div className="bg-gradient-to-r absolute top-[298rem] md:top-[201rem] lg:top-[108.5rem] lg:w-[80rem] from-[#2C7CF1] to-[#00D1FF80] flex md:flex-row flex-col justify-center lg:gap-0 gap-8 md:gap-4 text-white rounded-lg py-8 px-8">
                 <div>
@@ -79,6 +80,17 @@ const QuoteForm: React.FC = () => {
                 </form>
             </div>
         </div>
+        
+        {/* Mobile Screen Portion*/}
+        <div className="mt-4 w-full h-40 bg-cover bg-center" 
+        style={{ backgroundImage: `url("/images/RequestSupplier.png")`}}>
+        <div className='flex flex-col pl-4 pt-6 text-white'>
+         <text className="text-lg font-medium">An easy way to send</text>
+         <text className="text-lg font-medium -mt-1">requests to all suppliers</text></div>
+         <button className='text-white mt-3 ml-4 text-center text-sm w-24 h-7 rounded-md bg-blue-600'>Send Inquiry</button>
+         
+        </div>
+        </>
     );
 };
 
