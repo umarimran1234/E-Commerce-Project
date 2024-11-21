@@ -1,3 +1,5 @@
+
+
 "use client";
 import React, { useState } from "react";
 import { ChangeEvent } from "react";
@@ -30,7 +32,7 @@ const Navbar: React.FC = () => {
     <header className="bg-white shadow-none lg:shadow-md">
       <div className="container border-none lg:border-b-2 mb-2 pt-4 mx-auto px-4 py-2 flex items-center justify-between">
          {/* Hamburger Icon */}
-         <div className="lg:hidden mr-4">
+         <div className="md:hidden mr-4">
             <button onClick={handleMenuToggle}>
               {/* <IoReorderThreeOutline className="text-[33px] leading-loose text-gray-700" /> */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +86,7 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Cart and Profile Icons for Mobile Screen*/}
-          <div className="flex gap-x-4 lg:hidden">
+          <div className="flex gap-x-4 md:hidden">
             {/* Shopping Cart Icon*/}
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.5461 13C17.2961 13 17.9561 12.59 18.2961 11.97L21.8761 5.48C22.2461 4.82 21.7661 4 21.0061 4H6.20609L5.26609 2H1.99609V4H3.99609L7.59609 11.59L6.24609 14.03C5.51609 15.37 6.47609 17 7.99609 17H19.9961V15H7.99609L9.09609 13H16.5461ZM7.15609 6H19.3061L16.5461 11H9.52609L7.15609 6ZM7.99609 18C6.89609 18 6.00609 18.9 6.00609 20C6.00609 21.1 6.89609 22 7.99609 22C9.09609 22 9.99609 21.1 9.99609 20C9.99609 18.9 9.09609 18 7.99609 18ZM17.9961 18C16.8961 18 16.0061 18.9 16.0061 20C16.0061 21.1 16.8961 22 17.9961 22C19.0961 22 19.9961 21.1 19.9961 20C19.9961 18.9 19.0961 18 17.9961 18Z" fill="#1C1C1C"/>
@@ -114,7 +116,7 @@ const Navbar: React.FC = () => {
          
 
           {/* Right Side Icons - hidden on smaller devices */}
-          <div className="hidden lg:flex space-x-6 font-medium">
+          <div className="hidden md:flex space-x-6 font-medium">
             <Link
               href="#"
               className="flex text-gray-500 flex-col justify-center items-center"
@@ -148,7 +150,7 @@ const Navbar: React.FC = () => {
       </div>
 
           {/* Search Bar For Mobile Screen*/}
-          <div className="lg:hidden block mt-2 ml-4 ">
+          <div className="md:hidden block mt-2 ml-4 ">
         <div className=" w-[95%] h-10 rounded-md border border-sky-200 flex gap-x-4 bg-gray-100/40">
        {/*Search Icon*/}
        <div className=" flex items-center ml-2">
@@ -179,7 +181,7 @@ const Navbar: React.FC = () => {
       {/* Dropdown menu for mobile/tablet */}
       {menuOpen && (
         <nav className="lg:hidden z-50 bg-white shadow-md transition-transform duration-300">
-          <ul className="flex flex-col items-start space-y-2 px-4 py-2">
+          <ul className="flex flex-col items-start space-y-2 text-md px-4 py-2">
             <li>
               <Link
                 href="#"
