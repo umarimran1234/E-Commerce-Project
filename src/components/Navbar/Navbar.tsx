@@ -1,5 +1,3 @@
-
-
 "use client";
 import React, { useState } from "react";
 import { ChangeEvent } from "react";
@@ -10,6 +8,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import HamBurgerMenu from "../HamBurgerMenu/HamBurgerMenu";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +26,10 @@ const Navbar: React.FC = () => {
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const handleMenuClose = () => {
+        setMenuOpen(false);
+      };
 
   return (
     <header className="bg-white shadow-none lg:shadow-md">
@@ -180,63 +183,12 @@ const Navbar: React.FC = () => {
 
       {/* Dropdown menu for mobile/tablet */}
       {menuOpen && (
-        <nav className="lg:hidden z-50 bg-white shadow-md transition-transform duration-300">
-          <ul className="flex flex-col items-start space-y-2 text-md px-4 py-2">
-            <li>
-              <Link
-                href="#"
-                className="block text-gray-700 hover:text-blue-500"
-              >
-                All Category
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="block text-gray-700 hover:text-blue-500"
-              >
-                Hot Offers
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="block text-gray-700 hover:text-blue-500"
-              >
-                Gift Boxes
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="block text-gray-700 hover:text-blue-500"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="block text-gray-700 hover:text-blue-500"
-              >
-                Menu Item
-              </Link>
-            </li>
-            <li>
-              <select
-                onChange={handleChange}
-                className="w-full p-2 border border-gray-300"
-              >
-                <option value="all">Help</option>
-                <option value="second-page">Second Page</option>
-                <option value="third-page">Third Page</option>
-                <option value="fourth-page">Fourth Page</option>
-              </select>
-            </li>
-          </ul>
-        </nav>
-      )}
-
+  <div
+    className="fixed inset-0  -z-50"
+    onClick={() => setMenuOpen(false)}
+  />
+)}
+<HamBurgerMenu menuOpen={menuOpen} closeMenu={handleMenuClose} />
       {/* Desktop Menu */}
       <nav className="hidden lg:flex container mx-auto items-center justify-between">
         <div className="space-x-8 font-medium flex items-center mb-2">
