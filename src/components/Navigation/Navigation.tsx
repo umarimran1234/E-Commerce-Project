@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navigation: React.FC = () => {
     return (
-        <nav className='mt-10 flex flex-col-reverse md:flex-row-reverse gap-4'>
+        <nav className='mt-10 hidden md:flex md:flex-row-reverse gap-4'>
             <ul className="flex justify-end h-8 text-sm">
                 <li>
                     <a
