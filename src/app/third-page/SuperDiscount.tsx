@@ -1,6 +1,6 @@
 function SuperDiscount(){
     return(
-        <div className="container mt-10 mx-auto">
+        <div className="hidden md:block container mt-10 mx-auto">
             <div className="flex md:flex-row flex-col md:gap-0 gap-4 items-center justify-between">
                 <div className="bg-[#237CFF] text-white p-2 lg:p-6 rounded-l-lg md:rounded-r-none rounded-r-lg md:w-1/2">
                     <p className="font-semibold text-2xl">Super discount on more than 100 USD</p>

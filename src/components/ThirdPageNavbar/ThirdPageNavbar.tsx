@@ -29,15 +29,13 @@ const SecondPageNavbar: React.FC = () => {
       <div className="container border-none lg:border-b-2 mb-2 pt-4 mx-auto px-4 py-2 flex items-center justify-between">
          {/* Hamburger Icon */}
          <div className="md:hidden mr-4">
-              {/* <IoReorderThreeOutline className="text-[33px] leading-loose text-gray-700" /> */}
              <Link href="/"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="#1C1C1C"/>
 </svg></Link>
 
           </div>
         {/* Left Side */}
-        <div className="flex w-full justify-between items-center">
-          <h2 className="block md:hidden text-black text-lg font-semibold ml-2">Mobile accessory</h2>
+        <div className="flex w-full justify-end md:justify-between items-center">
        <Link href="/" className="hidden md:flex text-[#8CB7F5] text-xl font-bold gap-2 items-center"> <svg
   className="md:w-9 md:h-9"
   viewBox="0 0 46 46"
@@ -140,36 +138,7 @@ const SecondPageNavbar: React.FC = () => {
         </div>
       </div>
 
-          {/* Search Bar For Mobile Screen*/}
-          <div className="md:hidden block mt-2 ml-4 ">
-        <div className=" w-[95%] h-10 rounded-md border border-sky-200 flex gap-x-4 bg-gray-100/40">
-       {/*Search Icon*/}
-       <div className=" flex items-center ml-2">
-       <svg className="cursor-pointer" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M14.4417 13.067H13.7176L13.4609 12.8195C14.3592 11.7745 14.9001 10.4178 14.9001 8.94198C14.9001 5.65114 12.2326 2.98364 8.94173 2.98364C5.6509 2.98364 2.9834 5.65114 2.9834 8.94198C2.9834 12.2328 5.6509 14.9003 8.94173 14.9003C10.4176 14.9003 11.7742 14.3595 12.8192 13.4611L13.0667 13.7178V14.442L17.6501 19.0161L19.0159 17.6503L14.4417 13.067ZM8.94173 13.067C6.65923 13.067 4.81673 11.2245 4.81673 8.94198C4.81673 6.65948 6.65923 4.81698 8.94173 4.81698C11.2242 4.81698 13.0667 6.65948 13.0667 8.94198C13.0667 11.2245 11.2242 13.067 8.94173 13.067Z" fill="#8B96A5"/>
-</svg></div>
-
-{/* Input Area*/}
-<input type="text" placeholder="Search" className="-ml-2 bg-gray-100/40 text-lg h-full border-none outline-none text-gray-500"/>
-        </div>
-
-       </div>
-
-{/*Navigation for Mobile  */}
-       <div className="ml-4 mt-3 bg-white pb-4 flex lg:hidden overflow-x-auto scrollbar-hidden">
-      <div className="flex space-x-1 w-max">
-        {categories.map((category, index) => (
-          <div
-            key={index}
-            className="bg-gray-200/60 text-blue-600 font-semibold text-sm px-3 py-1.5 rounded-lg cursor-pointer whitespace-nowrap"
-          >
-            {category}
-          </div>
-        ))}
-      </div>
-    </div>
-
-     
+         
       {/* Desktop Menu */}
       <nav className="hidden lg:flex container mx-auto items-center justify-between">
         <div className="space-x-8 font-medium flex items-center mb-2">
@@ -220,34 +189,6 @@ const SecondPageNavbar: React.FC = () => {
           </div>
         </div>
       </nav>
-      {/* Filter and Sort portion for Mobile Screen*/}
-<div className="flex justify-center gap-x-2 mt-1 p-2 border-t border-b border-gray-200 md:hidden">
-{/* Sort*/}
-    <div className="rounded-md px-5 py-1 cursor-pointer flex border gap-x-2 justify-center items-center border-sky-300">
-    <p className="text-sm font-semibold">Sort: Newest</p>
-
-    </div>
-    {/* Filter*/}
-    <div className="rounded-md px-5 py-1 cursor-pointer flex border gap-x-3 justify-center items-center border-sky-300">
-    <p className="text-sm font-semibold">Filter(3)</p>
-    <Filter size={15} color={'gray'} />
-    </div>
-    </div>
-    <div className="flex justify-center gap-x-2 mt-1 p-2 bg-gray-100/80 md:hidden">
-      <div className="border border-blue-500 cursor-pointer rounded-md  gap-x-2 flex justify-center items-center px-3 py-1.5 text-gray-700 text-md bg-white">
-      Huawei
-      <X color={'gray'} />
-        </div>
-        <div className="border border-blue-500 cursor-pointer rounded-md gap-x-2 flex justify-center items-center px-3 py-1.5 text-gray-700 text-md bg-white">
-      Apple
-      <X color={'gray'}/>
-        </div>
-        <div className="border border-blue-500 cursor-pointer rounded-md gap-x-2 flex justify-center items-center px-3 py-1.5 text-gray-700 text-md bg-white">
-      64GB
-      <X color={'gray'}/>
-        </div>
-
-    </div>
     </header>
   );
 };

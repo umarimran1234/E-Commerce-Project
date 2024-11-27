@@ -17,7 +17,7 @@ const ProductTabs = () => {
         switch (activeTab) {
             case 'description':
                 return (
-                    <div>
+                    <div className="hidden md:block">
                         <p className="text-gray-600 mb-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                         </p>
@@ -83,7 +83,7 @@ const ProductTabs = () => {
     };
 
     return (
-        <div className="mx-auto flex lg:flex-row flex-col lg:gap-8 container mt-10">
+        <div className="mx-auto hidden md:flex lg:flex-row md:flex-col lg:gap-8 container mt-10">
             <div className="border-2 bg-white rounded-lg py-2 px-4 lg:w-2/3 border-gray-200 mb-4">
                 <ul className="flex md:space-x-4 md:flex-row">
                     {tabs.map((tab) => (

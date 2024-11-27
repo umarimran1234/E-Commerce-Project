@@ -1,15 +1,15 @@
-import Navbar from "@/components/Navbar/Navbar";
 import ProductComponent from "./ProductComponent";
 import ProductTabs from "./ProductTabs";
 import RelatedProducts from "./RelatedProducts";
 import SuperDiscount from "./SuperDiscount";
 import Footer from "@/components/Footer/Footer";
 import Breadcrumb from "./Breadcrumb";
+import ThirdPageNavbar from "@/components/ThirdPageNavbar/ThirdPageNavbar";
 
 function ThirdPage() {
     return (
         <>
-            <Navbar />
+            <ThirdPageNavbar />
             <Breadcrumb />
             <ProductComponent />
             <ProductTabs />
