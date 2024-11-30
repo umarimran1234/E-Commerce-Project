@@ -88,7 +88,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="/second-page" className="text-gray-400 hover:text-white">
                   Categories
                 </a>
               </li>
@@ -115,7 +115,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="/second-page" className="text-gray-400 hover:text-white">
                   Categories
                 </a>
               </li>

@@ -54,7 +54,7 @@ export default function HamBurgerMenu({ menuOpen, closeMenu }: { menuOpen: boole
           label="Home"
         />
         <NavItem
-          href="/categories"
+          href="/second-page"
           icon={<LayoutList color={'gray'} className="w-5 h-5" />}
           label="Categories"
         />
@@ -64,7 +64,7 @@ export default function HamBurgerMenu({ menuOpen, closeMenu }: { menuOpen: boole
           label="Favorites"
         />
         <NavItem
-          href="/orders"
+          href="/fourth-page"
           icon={<ShoppingBag color={'gray'} className="w-5 h-5" />}
           label="My orders"
           divider

@@ -130,7 +130,7 @@ const SecondPageNavbar: React.FC = () => {
               <span className="text-[12px] hover:text-blue-500">Orders</span>
             </Link>
             <Link
-              href="#"
+              href="/fourth-page"
               className="flex text-gray-500 flex-col justify-center items-center"
             >
               <FaCartShopping className="text-2xl" />
@@ -173,18 +173,18 @@ const SecondPageNavbar: React.FC = () => {
       {/* Desktop Menu */}
       <nav className="hidden lg:flex container mx-auto items-center justify-between">
         <div className="space-x-8 font-medium flex items-center mb-2">
-          <Link href="#" className="flex items-center gap-1">
+          <Link href="/second-page" className="flex items-center gap-1">
             <IoReorderThreeOutline className="font-bold text-xl" />
             <span className="text-gray-700 hover:text-blue-500">
               All Category
             </span>
           </Link>
-          <Link href="#">
+          <Link href="/second-page">
             <span className="text-gray-700 hover:text-blue-500">
               Hot Offers
             </span>
           </Link>
-          <Link href="#">
+          <Link href="/second-page">
             <span className="text-gray-700 hover:text-blue-500">
               Gift Boxes
             </span>
@@ -192,7 +192,7 @@ const SecondPageNavbar: React.FC = () => {
           <Link href="#">
             <span className="text-gray-700 hover:text-blue-500">Projects</span>
           </Link>
-          <Link href="#">
+          <Link href="/second-page">
             <span className="text-gray-700 hover:text-blue-500">Menu Item</span>
           </Link>
           <select onChange={handleChange}>
