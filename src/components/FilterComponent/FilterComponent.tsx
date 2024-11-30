@@ -19,7 +19,7 @@ const FilterComponent: React.FC = () => {
     };
 
     return (
-        <div className="grid lg:grid-cols-7 md:grid-cols-4 grid-cols-3 gap-1 md:gap-2 lg:gap-0 lg:w-9/12 space-x-2 mt-4">
+        <div className="hidden md:grid lg:grid-cols-7 md:grid-cols-4 grid-cols-3 gap-1 md:gap-2 lg:gap-0 lg:w-9/12 space-x-2 mt-4">
             {filters.map((filter, index) => (
                 <div
                     key={index}

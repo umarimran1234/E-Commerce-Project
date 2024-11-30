@@ -15,21 +15,21 @@ const DealsSection: React.FC = () => {
     <section className="container bg-white mx-auto mt-4 lg:mt-10">
       <div className="bg-white flex md:flex-row flex-col shadow-none lg:gap-10 lg:shadow-md rounded-lg border-none lg:border-2 lg:border-gray-300">
         {/* Responsive Layout for Timer and Header */}
-        <div className="flex justify-between mb-1 lg:flex-col md:items-start gap-2 pl-2 pt-2 items-start lg:items-center">
-          <div className="mb-4 -mt-1 flex flex-col lg:mb-0">
-            <h2 className="text-lg lg:text-xl font-semibold">Deals and offers</h2>
+        <div className="flex justify-between lg:justify-start  mb-1 lg:flex-col md:items-start gap-2 pl-2 pt-2 items-start lg:items-center">
+          <div className="mb-4 -mt-1 flex flex-col lg:mb-2">
+            <h2 className="text-lg lg:text-xl font-semibold lg:font-bold lg:mt-2">Deals and offers</h2>
             <p className="text-sm lg:text-md text-gray-500">Electronic equipments</p>
           </div>
           <CountdownTimer targetDate="2024-12-31T23:59:59" />
         </div>
 
         {/* Responsive Grid for Products (Desktop) */}
-        <div className="hidden lg:grid lg:grid-cols-5 gap-0 lg:gap-4">
+        <div className="hidden lg:grid lg:grid-cols-5">
           {deals.map((deal, index) => (
             <a
               href="/"
               key={index}
-              className="group p-4 border lg:border-l border-gray-300 block text-center"
+              className="group p-4 border border-l border-gray-300 block text-center"
             >
               <div className="relative">
                 <Image
@@ -37,7 +37,7 @@ const DealsSection: React.FC = () => {
                   height={1000}
                   src={deal.imgSrc}
                   alt={deal.name}
-                  className="w-full h-40 object-cover rounded-md group-hover:opacity-75 transition-opacity"
+                  className="lg:w-full lg:h-40 lg:object-cover rounded-md group-hover:opacity-75 transition-opacity"
                 />
               </div>
               <h3 className="mt-4 mb-2 font-medium">{deal.name}</h3>
@@ -49,7 +49,7 @@ const DealsSection: React.FC = () => {
         </div>
 
         {/* Product Grid View For Mobile Screen */}
-        <div className="flex overflow-x-auto scroll-smooth scrollbar-hidden">
+        <div className="flex lg:hidden overflow-x-auto scroll-smooth scrollbar-hidden">
           {deals.map((deal, index) => (
             <a
               href="/"

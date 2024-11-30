@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation/Navigation";
 import FilterSidebar from "@/components/Sidebar/FilterSidebar";
 import Subscribe from "@/components/Subscribe/Subscribe";
 import Breadcrumb from "./breadcumb";
+// import SecondPageNavbar from "@/components/SecondPageNavbar/SecondPageNavbar";
 
 function SecondPage() {
   return (
