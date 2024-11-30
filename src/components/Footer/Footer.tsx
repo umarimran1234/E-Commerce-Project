@@ -1,12 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaAngleUp,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube, FaAngleUp } from "react-icons/fa";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 
 const Footer = () => {
@@ -78,12 +73,12 @@ const Footer = () => {
             <h2 className="text-xl font-semibold mb-4">About</h2>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Find Store
                 </a>
               </li>
@@ -93,7 +88,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Blogs
                 </a>
               </li>
@@ -105,22 +100,22 @@ const Footer = () => {
             <h2 className="text-xl font-semibold mb-4">Partnership</h2>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Find Store
                 </a>
               </li>
               <li>
-                <a href="/second-page" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-white">
                   Categories
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Blogs
                 </a>
               </li>
@@ -132,22 +127,22 @@ const Footer = () => {
             <h2 className="text-xl font-semibold mb-4">Information</h2>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Help Center
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Money Refund
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Shipping
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Contact us
                 </a>
               </li>
@@ -159,22 +154,22 @@ const Footer = () => {
             <h2 className="text-xl font-semibold mb-4">For users</h2>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Login
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Register
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   Settings
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-gray-400 hover:text-black">
                   My Orders
                 </a>
               </li>

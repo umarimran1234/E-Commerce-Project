@@ -135,7 +135,7 @@ const Navbar: React.FC = () => {
               <span className="text-[12px] hover:text-blue-500">Messages</span>
             </Link>
             <Link
-              href="/fourth-page"
+              href="#"
               className="flex text-gray-500 flex-col justify-center items-center"
             >
               <FaHeart className="text-2xl" />

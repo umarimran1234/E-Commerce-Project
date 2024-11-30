@@ -1,7 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { Home, LayoutList, Heart, ShoppingBag, Globe, Headphones, Building2, User } from "lucide-react";
+import {
+  Home,
+  LayoutList,
+  Heart,
+  ShoppingBag,
+  Globe,
+  Headphones,
+  Building2,
+  User,
+} from "lucide-react";
 
 interface NavItemProps {
   href: string;
@@ -17,15 +26,22 @@ const NavItem = ({ href, icon, label, divider }: NavItemProps) => (
       className="flex items-center gap-3 px-6 py-3 text-md text-gray-900 hover:bg-gray-100 transition-colors"
     >
       {icon}
-      <span>{label}</span>
+      <span> {label} </span>
     </Link>
     {divider && <div className="h-px bg-gray-200 mx-6 my-2" />}
   </>
 );
 
-export default function HamBurgerMenu({ menuOpen, closeMenu }: { menuOpen: boolean; closeMenu: () => void }) {
+export default function HamBurgerMenu({
+  menuOpen,
+  closeMenu,
+}: {
+  menuOpen: boolean;
+  closeMenu: () => void;
+}) {
   return (
-    <div onClick={closeMenu}
+    <div
+      onClick={closeMenu}
       className={`fixed top-0 left-0 w-72 h-full bg-white border-r transition-transform duration-300 z-50 ${
         menuOpen ? "translate-x-0" : "-translate-x-full"
       }`}
@@ -36,11 +52,19 @@ export default function HamBurgerMenu({ menuOpen, closeMenu }: { menuOpen: boole
           <User className="w-8 h-8 text-gray-500" />
         </div>
         <div className="flex gap-x-2 text-md">
-          <Link href="/signin" onClick={closeMenu} className="text-gray-900 hover:underline">
+          <Link
+            href="/signin"
+            onClick={closeMenu}
+            className="text-gray-900 hover:underline"
+          >
             Sign in
           </Link>
           {" | "}
-          <Link href="/register" onClick={closeMenu} className="text-gray-900 hover:underline">
+          <Link
+            href="/register"
+            onClick={closeMenu}
+            className="text-gray-900 hover:underline"
+          >
             Register
           </Link>
         </div>
@@ -50,7 +74,7 @@ export default function HamBurgerMenu({ menuOpen, closeMenu }: { menuOpen: boole
       <nav className="flex-1">
         <NavItem
           href="/"
-          icon={<Home color={'gray'} className="w-5 h-5" />}
+          icon={<Home color={"gray"} className="w-5 h-5" />}
           label="Home"
         />
         <NavItem
@@ -60,7 +84,7 @@ export default function HamBurgerMenu({ menuOpen, closeMenu }: { menuOpen: boole
         />
         <NavItem
           href="/favorites"
-          icon={<Heart color={'gray'} className="w-5 h-5" />}
+          icon={<Heart color={"gray"} className="w-5 h-5" />}
           label="Favorites"
         />
         <NavItem
@@ -73,17 +97,17 @@ export default function HamBurgerMenu({ menuOpen, closeMenu }: { menuOpen: boole
         {/* Settings & Support */}
         <NavItem
           href="/language"
-          icon={<Globe color={'gray'} className="w-5 h-5" />}
+          icon={<Globe color={"gray"} className="w-5 h-5" />}
           label="English | USD"
         />
         <NavItem
           href="/contact"
-          icon={<Headphones color={'gray'} className="w-5 h-5" />}
+          icon={<Headphones color={"gray"} className="w-5 h-5" />}
           label="Contact us"
         />
         <NavItem
           href="/about"
-          icon={<Building2 color={'gray'} className="w-5 h-5" />}
+          icon={<Building2 color={"gray"} className="w-5 h-5" />}
           label="About"
           divider
         />
@@ -91,13 +115,25 @@ export default function HamBurgerMenu({ menuOpen, closeMenu }: { menuOpen: boole
 
       {/* Footer Links */}
       <div className="p-4 flex flex-col ml-5 gap-y-2 text-md border-b border-gray-200">
-        <Link href="/agreement" onClick={closeMenu} className="block text-gray-600 hover:text-gray-900">
+        <Link
+          href="/agreement"
+          onClick={closeMenu}
+          className="block text-gray-600 hover:text-gray-900"
+        >
           User agreement
         </Link>
-        <Link href="/partnership" onClick={closeMenu} className="block text-gray-600 hover:text-gray-900">
+        <Link
+          href="/partnership"
+          onClick={closeMenu}
+          className="block text-gray-600 hover:text-gray-900"
+        >
           Partnership
         </Link>
-        <Link href="/privacy" onClick={closeMenu} className="block mb-4 text-gray-600 hover:text-gray-900">
+        <Link
+          href="/privacy"
+          onClick={closeMenu}
+          className="block mb-4 text-gray-600 hover:text-gray-900"
+        >
           Privacy policy
         </Link>
       </div>
