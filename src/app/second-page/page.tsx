@@ -7,23 +7,23 @@ import Subscribe from "@/components/Subscribe/Subscribe";
 import Breadcrumb from "./breadcumb";
 
 function SecondPage() {
-    return (
-        <>
-            <Navbar></Navbar>
-            <Breadcrumb></Breadcrumb>
-            <div className="container mx-auto">
-                <div className="flex justify-center md:gap-8">
-                    <FilterSidebar></FilterSidebar>
-                    <div className="md:w-9/12">
-                        <LayoutShift></LayoutShift>
-                        <Navigation></Navigation>
-                    </div>
-                </div>
-            </div>
-            <Subscribe></Subscribe>
-            <Footer></Footer>
-        </>
-    )
+  return (
+    <>
+      <Navbar></Navbar>
+      <Breadcrumb></Breadcrumb>
+      <div className="container mx-auto">
+        <div className="flex justify-center md:gap-8">
+          <FilterSidebar></FilterSidebar>
+          <div className="md:w-9/12">
+            <LayoutShift></LayoutShift>
+            <Navigation></Navigation>
+          </div>
+        </div>
+      </div>
+      <Subscribe></Subscribe>
+      <Footer></Footer>
+    </>
+  );
 }
 
 export default SecondPage;
