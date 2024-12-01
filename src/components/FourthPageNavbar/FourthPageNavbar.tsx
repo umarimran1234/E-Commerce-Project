@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { ChangeEvent } from "react";
 import Link from "next/link";
 import { FaChevronDown, FaHeart } from "react-icons/fa";
@@ -20,27 +20,43 @@ const FourthPageNavbar: React.FC = () => {
     }
   };
 
-  
-
   return (
     <header className="bg-white shadow-none lg:shadow-md">
       <div className="container shadow-lg md:shadow-none border-none lg:border-b-2 mb-2 pt-4 mx-auto px-4 py-2 flex items-center justify-between">
-         {/* Hamburger Icon */}
-         <div className="md:hidden mr-4">
-             <Link href="/"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="#1C1C1C"/>
-</svg></Link>
-
-          </div>
+        {/* Hamburger Icon */}
+        <div className="md:hidden mr-4">
+          <Link href="/">
+            {" "}
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"
+                fill="#1C1C1C"
+              />
+            </svg>
+          </Link>
+        </div>
         {/* Left Side */}
         <div className="flex w-full justify-between items-center">
-          <h2 className="block md:hidden text-black text-lg font-semibold ml-2">Shopping cart</h2>
-       <Link href="/" className="hidden md:flex text-[#8CB7F5] text-xl font-bold gap-2 items-center"> <svg
-  className="md:w-9 md:h-9"
-  viewBox="0 0 46 46"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
+          <h2 className="block md:hidden text-black text-lg font-semibold ml-2">
+            Shopping cart
+          </h2>
+          <Link
+            href="/"
+            className="hidden md:flex text-[#8CB7F5] text-xl font-bold gap-2 items-center"
+          >
+            {" "}
+            <svg
+              className="md:w-9 md:h-9"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -73,7 +89,6 @@ const FourthPageNavbar: React.FC = () => {
             Brand
           </Link>
 
-
           {/* Search Bar */}
           <div className="relative hidden md:block">
             <input
@@ -88,7 +103,6 @@ const FourthPageNavbar: React.FC = () => {
               Search
             </button>
           </div>
-         
 
           {/* Right Side Icons - hidden on smaller devices */}
           <div className="hidden md:flex space-x-6 font-medium">
@@ -123,7 +137,7 @@ const FourthPageNavbar: React.FC = () => {
           </div>
         </div>
       </div>
-     
+
       {/* Desktop Menu */}
       <nav className="hidden lg:flex container mx-auto items-center justify-between">
         <div className="space-x-8 font-medium flex items-center mb-2">
@@ -174,7 +188,6 @@ const FourthPageNavbar: React.FC = () => {
           </div>
         </div>
       </nav>
-    
     </header>
   );
 };
