@@ -78,8 +78,8 @@ export default function HamBurgerMenu({
           label="Home"
         />
         <NavItem
-          href="/categories"
-          icon={<LayoutList color={"gray"} className="w-5 h-5" />}
+          href="/second-page"
+          icon={<LayoutList color={'gray'} className="w-5 h-5" />}
           label="Categories"
         />
         <NavItem
@@ -88,8 +88,8 @@ export default function HamBurgerMenu({
           label="Favorites"
         />
         <NavItem
-          href="/orders"
-          icon={<ShoppingBag color={"gray"} className="w-5 h-5" />}
+          href="/fourth-page"
+          icon={<ShoppingBag color={'gray'} className="w-5 h-5" />}
           label="My orders"
           divider
         />
