@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar/Navbar";
+import FourthPageNavbar from "@/components/FourthPageNavbar/FourthPageNavbar";
 import ShoppingCart from "./ShoppingCart"
 import PaymentPromotion from "./PaymentPromotion";
 import SavedForLater from "./SavedForLater";
@@ -7,14 +7,14 @@ import Footer from "@/components/Footer/Footer";
 
 function FourthPage() {
     return (
-        <>
-            <Navbar></Navbar>
+        <div className="bg-gray-100/20">
+        <FourthPageNavbar/>
             <ShoppingCart></ShoppingCart>
             <PaymentPromotion></PaymentPromotion>
             <SavedForLater></SavedForLater>
             <SuperDiscount></SuperDiscount>
             <Footer></Footer>
-        </>
+        </div>
     )
 }
 

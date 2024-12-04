@@ -1,16 +1,28 @@
 import Image from "next/image";
 import React from "react";
+import Link from 'next/link'
+
+
+
+const items = [
+  { name: "Soft chairs", imgSrc: "/images/Chair.png" },
+  { name: "Kitchen Mixer", imgSrc: "/images/Mixer.png" },
+  { name: "Blenders", imgSrc: "/images/Blender.png" },
+  { name: "Kitchen dishes",imgSrc: "/images/Dish.png" },
+  { name: "Plates", imgSrc: "/images/Plate.png" },
+];
 
 const HomeAndOutdoor = () => {
+
   return (
-    <div className="container mx-auto">
-      <div className="bg-white mt-[2rem] rounded-lg border-2 border-gray-300">
+    <div className="container w-full bg-white mx-auto">
+      <div className="bg-white mt-4 lg:mt-[2rem] rounded-lg border-none lg:border-2 lg:border-gray-300">
         {/* Main Container */}
-        <div className="flex flex-col lg:flex-row items-start space-y-6 lg:space-y-0 ">
+        <div className="hidden lg:flex lg:flex-row items-start space-y-6 lg:space-y-0 ">
           {/* Left Section - Background Image, Title, and Button */}
           <div
             id="backimg"
-            className="w-full lg:w-1/5  h-[23rem]  bg-cover bg-left p-4 "
+            className=" w-full lg:w-1/5  h-[23rem]  bg-cover bg-left p-4 "
             style={{
               backgroundImage: `url("/images/OutdoorBg.jpeg")`,
             }}
@@ -157,6 +169,39 @@ const HomeAndOutdoor = () => {
             </div>
           </div>
         </div>
+        {/* Mobile Screen Portion*/}
+        <div className="flex bg-white border-b border-sky-100 flex-col lg:hidden pt-2">
+          <h2 className="font-semibold text-lg pb-2 ml-2">Home and Outdoor</h2>
+
+          {/* Product Grid View For Mobile Screen */}
+        <div className="flex overflow-x-auto mt-2 scroll-smooth scrollbar-hidden">
+          {items.map((item, index) => (
+            <a
+              href="/"
+              key={index}
+              className={`shrink-0 w-1/2 ${index === 0 ? 'pl-4' : ''} ${index === items.length - 1 ? 'pr-4' : ''} p-4 border border-gray-300 block text-center`}
+            >
+              <div className="relative">
+                <Image
+                  width={600}
+                  height={600}
+                  src={item.imgSrc}
+                  alt={item.name}
+                  className="w-full h-32 object-contain rounded-md group-hover:opacity-75 transition-opacity"
+                />
+              </div>
+              <h3 className="mt-4 mb-2 font-medium">{item.name}</h3>
+              <p className="text-xs font-medium text-gray-500">From $19</p>
+            </a>
+          ))}
+        </div>
+
+{/*Source Now Route*/}
+<Link href="/" className="text-blue-500 text-md font-medium mt-4 ml-2 pb-3 flex items-center gap-x-2">Source now <svg className="flex items-center" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.0003 3.66663L9.70783 4.95913L14.8228 10.0833H3.66699V11.9166H14.8228L9.70783 17.0408L11.0003 18.3333L18.3337 11L11.0003 3.66663Z" fill="#0D6EFD"/>
+</svg>
+ </Link>
+          </div>
       </div>
     </div>
   );

@@ -41,11 +41,11 @@ const CountdownTimer: React.FC<CountdownProps> = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="flex space-x-2">
+    <div className="flex mr-1 space-x-1 lg:space-x-2">
       {Object.keys(timeLeft).map((interval, index) => (
-        <div key={index} className="flex flex-col bg-[#606060] w-[45px] h-[50px] rounded-md text-white items-center">
-          <span className="text-lg font-semibold">{timeLeft[interval as keyof typeof timeLeft] || '0'}</span>
-          <span className="text-sm">{interval.charAt(0).toUpperCase() + interval.slice(1)}</span>
+        <div key={index} className="flex flex-col bg-gray-200/60 text-gray-500 lg:bg-[#606060] w-[35px] h-[40px] lg:w-[45px] lg:h-[50px] rounded-none lg:rounded-md lg:text-white items-center">
+          <span className="text-md font-semibold">{timeLeft[interval as keyof typeof timeLeft] || '0'}</span>
+          <span className="text-xs lg:text-sm">{interval.charAt(0).toUpperCase() + interval.slice(1)}</span>
         </div>
       ))}
     </div>

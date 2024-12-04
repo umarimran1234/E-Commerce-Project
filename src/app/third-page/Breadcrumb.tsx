@@ -2,7 +2,7 @@ import React from 'react';
 
 const Breadcrumb: React.FC = () => {
     return (
-        <nav className="flex container mx-auto mt-4" aria-label="Breadcrumb">
+        <nav className="hidden md:flex container mx-auto mt-4" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li className="inline-flex items-center">
                     <a

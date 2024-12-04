@@ -8,12 +8,11 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import HamBurgerMenu from "../HamBurgerMenu/HamBurgerMenu";
+import { Filter, X } from "lucide-react";
 
-const Navbar: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const SecondPageNavbar: React.FC = () => {
   const router = useRouter();
-  const categories = ["All Category", "Gadgets", "Clothes", "Accessories"];
+  const categories = ["Tablets", "Phones", "Ipads", "Ipods","Laptops"];
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     // console.log("Changed")
@@ -23,35 +22,24 @@ const Navbar: React.FC = () => {
     }
   };
 
-  const handleMenuToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const handleMenuClose = () => {
-        setMenuOpen(false);
-      };
+  
 
   return (
     <header className="bg-white shadow-none lg:shadow-md">
       <div className="container border-none lg:border-b-2 mb-2 pt-4 mx-auto px-4 py-2 flex items-center justify-between">
          {/* Hamburger Icon */}
          <div className="md:hidden mr-4">
-            <button onClick={handleMenuToggle}>
               {/* <IoReorderThreeOutline className="text-[33px] leading-loose text-gray-700" /> */}
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#1C1C1C"/>
-</svg>
-            </button>
+             <Link href="/"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="#1C1C1C"/>
+</svg></Link>
+
           </div>
         {/* Left Side */}
         <div className="flex w-full justify-between items-center">
-          <Link
-            href="/"
-            className="flex text-[#8CB7F5] cursor-pointer text-xl font-bold gap-2 items-center"
-          >
-            {/* Brand Logo */}
-            <svg
-  className="w-9 h-9 sm:w-11 sm:h-11"
+          <h2 className="block md:hidden text-black text-lg font-semibold ml-2">Mobile accessory</h2>
+       <Link href="/" className="hidden md:flex text-[#8CB7F5] text-xl font-bold gap-2 items-center"> <svg
+  className="md:w-9 md:h-9"
   viewBox="0 0 46 46"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
@@ -91,9 +79,9 @@ const Navbar: React.FC = () => {
           {/* Cart and Profile Icons for Mobile Screen*/}
           <div className="flex gap-x-4 md:hidden">
             {/* Shopping Cart Icon*/}
-          <Link href="/fourth-page"><svg className="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.5461 13C17.2961 13 17.9561 12.59 18.2961 11.97L21.8761 5.48C22.2461 4.82 21.7661 4 21.0061 4H6.20609L5.26609 2H1.99609V4H3.99609L7.59609 11.59L6.24609 14.03C5.51609 15.37 6.47609 17 7.99609 17H19.9961V15H7.99609L9.09609 13H16.5461ZM7.15609 6H19.3061L16.5461 11H9.52609L7.15609 6ZM7.99609 18C6.89609 18 6.00609 18.9 6.00609 20C6.00609 21.1 6.89609 22 7.99609 22C9.09609 22 9.99609 21.1 9.99609 20C9.99609 18.9 9.09609 18 7.99609 18ZM17.9961 18C16.8961 18 16.0061 18.9 16.0061 20C16.0061 21.1 16.8961 22 17.9961 22C19.0961 22 19.9961 21.1 19.9961 20C19.9961 18.9 19.0961 18 17.9961 18Z" fill="#1C1C1C"/>
-</svg></Link>
+</svg>
 
 {/* Profile Icon*/}
 <svg className="cursor-pointer"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,7 +97,7 @@ const Navbar: React.FC = () => {
               placeholder="Search"
               className="border-2 border-[#0D6EFD] rounded-lg py-2 pl-4 pr-10 w-[18rem] md:w-[30rem] lg:w-[50rem] focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <select className="absolute right-16 border-l-2 border-[#0D6EFD] top-1/2 transform -translate-y-1/2 text-[#1C1C1C] p-2 text-gray-500">
+            <select className="absolute right-16 border-l-2 border-[#0D6EFD] top-1/2 transform -translate-y-1/2 text-[#1C1C1C] p-2">
               <option value="all">All category</option>
             </select>
             <button className="absolute border-[#0D6EFD] right-0 rounded-r-lg text-white top-1/2 transform -translate-y-1/2 p-2 bg-[#0D6EFD]">
@@ -181,14 +169,7 @@ const Navbar: React.FC = () => {
       </div>
     </div>
 
-      {/* Dropdown menu for mobile/tablet */}
-      {menuOpen && (
-  <div
-    className="fixed inset-0  -z-50"
-    onClick={() => setMenuOpen(false)}
-  />
-)}
-<HamBurgerMenu menuOpen={menuOpen} closeMenu={handleMenuClose} />
+     
       {/* Desktop Menu */}
       <nav className="hidden lg:flex container mx-auto items-center justify-between">
         <div className="space-x-8 font-medium flex items-center mb-2">
@@ -239,8 +220,36 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </nav>
+      {/* Filter and Sort portion for Mobile Screen*/}
+<div className="flex justify-center gap-x-2 mt-1 p-2 border-t border-b border-gray-200 md:hidden">
+{/* Sort*/}
+    <div className="rounded-md px-5 py-1 cursor-pointer flex border gap-x-2 justify-center items-center border-sky-300">
+    <p className="text-sm font-semibold">Sort: Newest</p>
+
+    </div>
+    {/* Filter*/}
+    <div className="rounded-md px-5 py-1 cursor-pointer flex border gap-x-3 justify-center items-center border-sky-300">
+    <p className="text-sm font-semibold">Filter(3)</p>
+    <Filter size={15} color={'gray'} />
+    </div>
+    </div>
+    <div className="flex justify-center gap-x-2 mt-1 p-2 bg-gray-100/80 md:hidden">
+      <div className="border border-blue-500 cursor-pointer rounded-md  gap-x-2 flex justify-center items-center px-3 py-1.5 text-gray-700 text-md bg-white">
+      Huawei
+      <X color={'gray'} />
+        </div>
+        <div className="border border-blue-500 cursor-pointer rounded-md gap-x-2 flex justify-center items-center px-3 py-1.5 text-gray-700 text-md bg-white">
+      Apple
+      <X color={'gray'}/>
+        </div>
+        <div className="border border-blue-500 cursor-pointer rounded-md gap-x-2 flex justify-center items-center px-3 py-1.5 text-gray-700 text-md bg-white">
+      64GB
+      <X color={'gray'}/>
+        </div>
+
+    </div>
     </header>
   );
 };
 
-export default Navbar;
+export default SecondPageNavbar;
